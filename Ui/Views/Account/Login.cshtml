@@ -1,0 +1,60 @@
+﻿@model LoginDto
+
+
+<!-- Breadcroumbs start -->
+<div class="wshipping-content-block wshipping-breadcroumb inner-bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <h1>Customer Login</h1>
+                <a href="index.html" title="Home">Home</a> / Customer Login
+            </div>
+            <div class="col-12 col-lg-5 text-right">
+                <h4>
+                    We freight to all over the world
+                    The best logistic company, <span>FAST</span> and <span>SAFELY!</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcroumbs end -->
+<!-- Customer login Start -->
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="customer-login">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="customer-login-left">
+                        <div class="login-icon"><i class="fa fa-lock"></i></div>
+                        <h4>Welcome To your account</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a asp-controller="Account" asp-action="Register">Create A new Account</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="customer-login-block">
+                        <h2>Login To Your Account</h2>
+                        <form asp-controller="Account" asp-action="Login" method="post" role="form">
+                            <div class="form-group">
+                                <label>Email address:</label>
+                                <input asp-for="Email" type="email" class="form-control" />
+                            </div>
+                            <div class="form-group">
+                                <label>Password:</label>
+                                <input asp-for="Password" type="password" class="form-control" />
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="remember" id="remember" class="css-checkbox" />
+                                <label for="remember" class="css-label">Remember me</label>
+                                <a href="#" title="" class="forgot-pass">Forgot your password?</a>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Customer login end -->

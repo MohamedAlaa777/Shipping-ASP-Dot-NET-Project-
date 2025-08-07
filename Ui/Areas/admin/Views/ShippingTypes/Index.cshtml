@@ -1,0 +1,136 @@
+﻿@model List<ShippingTypeDto>
+
+
+@section Styles
+{
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/assets/Backend/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <!-- End plugin css for this page -->
+}
+
+
+<div class="container-fluid page-body-wrapper">
+    <div class="main-panel">
+        <div class="content-wrapper">
+            <div class="page-header">
+                <h3 class="page-title"> @Shipping.ShippingTypes </h3>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">@Shipping.ShippingTypes</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Data table</li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Data table</h4>
+                    <div class="row">
+                        <div class="col-12">
+                            <a href="/Admin/ShippingTypes/Edit" class="btn btn-success btn-fw">New</a>
+                            <table id="order-listing" class="table table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>@Labels.NameAr</th>
+                                        <th>@Labels.NameEn</th>
+                                        <th>@Labels.Factor</th>
+                                        <th>@Labels.Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var shippingTypes in Model)
+                                    {
+                                        <tr style="margin:0px;padding:0px;">
+                                            <td class="col-md-8">@shippingTypes.ShippingTypeAname</td>
+                                            <td class="col-md-8">@shippingTypes.ShippingTypeEname</td>
+                                            <td class="col-md-8">@shippingTypes.ShippingFactor</td>
+                                            <td class="col-md-4" style="margin:0px;padding:0px;">
+                                                <a style="height:max-content"
+                                                   asp-controller="ShippingTypes" asp-action="Edit" asp-route-Id="@shippingTypes.Id"
+                                                   class="btn btn-info btn-fw">@Actions.Edit</a>
+
+
+                                                @* <a asp-controller="ShippingTypes" asp-action="Delete" asp-route-Id="@shippingTypes.Id"
+                                                   class="btn btn-danger btn-fw"
+                                                   onclick="return confirm(" Are you sure");">@Actions.Delete</a> *@
+                                                <button type="button" class="btn btn-danger btn-fw" data-id="@shippingTypes.Id">@Actions.Delete</button>
+                                            </td>
+                                        </tr>
+                                    }
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- content-wrapper ends -->
+    </div>
+    <!-- main-panel ends -->
+</div>
+
+@section Scripts
+{
+    <!-- plugins:js -->
+    <script src="~/Admin/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Admin/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="~/Admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page -->
+    <script src="~/Admin/js/data-table.js"></script>
+    <!-- End custom js for this page -->
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-danger').on('click', function (e) {
+                var id = $(this).data('id');
+
+                alert.ConfirmDelete(function (result) {
+                    if (result) {
+                        // Redirect to the delete action with the ShippingTypes ID
+                        window.location.href = "/admin/ShippingTypes/Delete?id=" + id;
+                    }
+                });
+            });
+        });
+    </script>
+
+    @if (TempData["MessageType"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                let messageType = @TempData["MessageType"];
+                console.log(messageType);
+
+                switch (messageType) {
+                    case 1:
+                        alert.Success('@Messages.SaveSuccessTitle', '@Messages.SaveSuccessMessage');
+                        break;
+
+                    case 2:
+                        alert.Error('@Messages.SaveFailedTitle', '@Messages.SaveFailedMessage');
+                        break;
+
+                    case 3:
+                        alert.Success('@Messages.DeleteSuccessTitle', '@Messages.DeleteSucessMessage');
+                        break;
+
+                    case 4:
+                        alert.Error('@Messages.DeleteFailedTitle', '@Messages.DeleteFailedMessage');
+                        break;
+
+                    default:
+                        console.log("Unknown message type");
+                        break;
+                }
+            });
+        </script>
+    }
+
+    }
+
+}
+
+

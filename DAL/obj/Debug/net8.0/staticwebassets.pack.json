@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\DAL.bundle.scp.css",
+      "PackagePath": "staticwebassets\\DAL.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\wwwroot\\background.png",
+      "PackagePath": "staticwebassets\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\wwwroot\\exampleJsInterop.js",
+      "PackagePath": "staticwebassets\\exampleJsInterop.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.DAL.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.DAL.props",
+      "PackagePath": "build\\DAL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.DAL.props",
+      "PackagePath": "buildMultiTargeting\\DAL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.DAL.props",
+      "PackagePath": "buildTransitive\\DAL.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

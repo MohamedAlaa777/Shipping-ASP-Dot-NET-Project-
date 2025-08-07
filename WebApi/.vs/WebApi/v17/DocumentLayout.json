@@ -1,0 +1,1437 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\controllers\\shipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\services\\shipment\\shipmentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\services\\baseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\controllers\\shipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:controllers\\shipmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\registerservcieshelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:services\\tokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\userdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\usermodels\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\services\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\contracts\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\contract\\shipment\\ishipment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\contract\\irefreshtokens.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\services\\refreshtokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D360A2B-9CA4-4DEC-B194-074F37C07FFD}|..\\Domains\\Domains.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\domains\\tbsubscriptionpackage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\wwwroot\\modules\\apiclient.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:models\\apiresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\citydto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\views\\shipment\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\wwwroot\\modules\\shipment\\managepagecontrols.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\controllers\\citiescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\shippingtypes\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\shippingtypes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\countries\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\countries\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\cities\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\cities\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D360A2B-9CA4-4DEC-B194-074F37C07FFD}|..\\Domains\\Domains.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\domains\\tbshippment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D360A2B-9CA4-4DEC-B194-074F37C07FFD}|..\\Domains\\Domains.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\domains\\tbcarrier.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\usersubscriptiondto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\userreceiverdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\subscriptionpackagedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\shippmentstatusdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\shippmentdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\shippingtypedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\settingdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\paymentmethoddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\dtos\\carrierdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\controllers\\countriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:controllers\\countriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:controllers\\weatherforecastcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\controllers\\shippingtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:controllers\\shippingtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\views\\shipment\\show.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\migrations\\20250608083325_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\services\\cityservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\contract\\icity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\repositories\\viewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\contracts\\iviewrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D05A297A-0AB7-40D2-B53D-E621DED3418C}|..\\AppResource\\AppResource.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\appresource\\messages.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\webapi\\services\\contextconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0361BB30-3076-4E6E-89E0-8EE1BF05CCFE}|WebApi.csproj|solutionrelative:services\\contextconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\services\\contextconfig.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\migrations\\20250626135240_refreshtokentable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D360A2B-9CA4-4DEC-B194-074F37C07FFD}|..\\Domains\\Domains.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\domains\\basetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D05A297A-0AB7-40D2-B53D-E621DED3418C}|..\\AppResource\\AppResource.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\appresource\\shipping.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D05A297A-0AB7-40D2-B53D-E621DED3418C}|..\\AppResource\\AppResource.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\appresource\\shipping.ar.resx||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\controllers\\countriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D05A297A-0AB7-40D2-B53D-E621DED3418C}|..\\AppResource\\AppResource.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\appresource\\shipping.ar.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D05A297A-0AB7-40D2-B53D-E621DED3418C}|..\\AppResource\\AppResource.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\appresource\\messages.ar.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\controllers\\shippingtypescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\services\\shippingtypeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\contract\\ishippingtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\areas\\admin\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\mapping\\imapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\mapping\\automapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\helpers\\messagetypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5953431B-43E3-4328-BCFA-6DF727D95BAC}|..\\Ui\\Ui.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\ui\\wwwroot\\app\\shared\\alerts.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D05A297A-0AB7-40D2-B53D-E621DED3418C}|..\\AppResource\\AppResource.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\appresource\\actions.ar.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D05A297A-0AB7-40D2-B53D-E621DED3418C}|..\\AppResource\\AppResource.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\appresource\\actions.resx||{FF4D6ACA-9352-4A5F-821E-F4D6EBDCAB11}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\data\\shippingcontextfactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\exceptions\\dataaccessexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0729EC94-FDDF-45C4-9618-275225D8CE2F}|..\\DAL\\DAL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\dal\\dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A172929-DE7B-4DDF-BA1F-6BE48479B4ED}|..\\BL\\BL.csproj|c:\\users\\dell\\documents\\asp.net mvc core\\shipping\\bl\\bl.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippingTypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserReceivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserSubscriptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserSebders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSubscriptionPackages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "TbSubscriptionPackage.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSubscriptionPackage.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbSubscriptionPackage.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSubscriptionPackage.cs",
+              "RelativeToolTip": "..\\Domains\\TbSubscriptionPackage.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:49:50.881Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShipmentController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\ShipmentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ShipmentController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\ShipmentController.cs",
+              "RelativeToolTip": "Controllers\\ShipmentController.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAQwFoAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T12:44:17.271Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BaseService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\BaseService.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Services\\BaseService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\BaseService.cs",
+              "RelativeToolTip": "..\\BL\\Services\\BaseService.cs",
+              "ViewState": "AQIAABkAAAAAAAAAAAA5wCgAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T05:52:34.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ShipmentService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\Shipment\\ShipmentService.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Services\\Shipment\\ShipmentService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\Shipment\\ShipmentService.cs",
+              "RelativeToolTip": "..\\BL\\Services\\Shipment\\ShipmentService.cs",
+              "ViewState": "AQIAAEgAAAAAAAAAAAAowFIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-19T21:07:05.831Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ShipmentController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Controllers\\ShipmentController.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Controllers\\ShipmentController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Controllers\\ShipmentController.cs",
+              "RelativeToolTip": "..\\Ui\\Controllers\\ShipmentController.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAgwBwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-04T13:04:30.079Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "RegisterServciesHelper.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\RegisterServciesHelper.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\RegisterServciesHelper.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\RegisterServciesHelper.cs",
+              "RelativeToolTip": "..\\Ui\\RegisterServciesHelper.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAcwCgAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-16T06:44:21.705Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "..\\Ui\\Controllers\\AccountController.cs",
+              "ViewState": "AQIAADYAAAAAAAAAAAAowEkAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T07:23:38.53Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "Controllers\\AuthController.cs",
+              "ViewState": "AQIAADcAAAAAAAAAAAAcwEoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T06:30:14.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TokenService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Services\\TokenService.cs",
+              "RelativeDocumentMoniker": "Services\\TokenService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Services\\TokenService.cs",
+              "RelativeToolTip": "Services\\TokenService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAowCAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T04:38:35.715Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Services\\UserService.cs",
+              "RelativeToolTip": "Services\\UserService.cs",
+              "ViewState": "AQIAAGgAAAAAAAAAAAAowHIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T05:46:07.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\UserDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\UserDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\UserDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\UserDto.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAA1wCMAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T05:24:26.383Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\UserModels\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\UserModels\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\UserModels\\ApplicationUser.cs",
+              "RelativeToolTip": "..\\DAL\\UserModels\\ApplicationUser.cs",
+              "ViewState": "AQIAAAIAAAAAAAAAAAAowA4AAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-09T16:50:47.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Services\\UserService.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Services\\UserService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Services\\UserService.cs",
+              "RelativeToolTip": "..\\Ui\\Services\\UserService.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowE0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-14T05:33:12.218Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Repositories\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Repositories\\GenericRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Repositories\\GenericRepository.cs",
+              "ViewState": "AQIAAMEAAAAAAAAAAAAIwMoAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-08T05:51:21.017Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Contracts\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Contracts\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Contracts\\IGenericRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Contracts\\IGenericRepository.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA5wBkAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T07:03:19.033Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IShipment.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\Shipment\\IShipment.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Contract\\Shipment\\IShipment.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\Shipment\\IShipment.cs",
+              "RelativeToolTip": "..\\BL\\Contract\\Shipment\\IShipment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAD4vw4AAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-07T06:56:33.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IRefreshTokens.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\IRefreshTokens.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Contract\\IRefreshTokens.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\IRefreshTokens.cs",
+              "RelativeToolTip": "..\\BL\\Contract\\IRefreshTokens.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T06:37:45.356Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RefreshTokenService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\RefreshTokenService.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Services\\RefreshTokenService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\RefreshTokenService.cs",
+              "RelativeToolTip": "..\\BL\\Services\\RefreshTokenService.cs",
+              "ViewState": "AQIAABEAAAAAAAAAAAAQwBgAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-27T06:36:21.098Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "ApiClient.js",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\ApiClient.js",
+              "RelativeDocumentMoniker": "..\\Ui\\wwwroot\\Modules\\ApiClient.js",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\ApiClient.js",
+              "RelativeToolTip": "..\\Ui\\wwwroot\\Modules\\ApiClient.js",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAAAEQAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-04T13:08:05.094Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "CitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\CitiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CitiesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\CitiesController.cs",
+              "RelativeToolTip": "Controllers\\CitiesController.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAgwEIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:26:08.762Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "ApiResponse.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Models\\ApiResponse.cs",
+              "RelativeDocumentMoniker": "Models\\ApiResponse.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Models\\ApiResponse.cs",
+              "RelativeToolTip": "Models\\ApiResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:17:04.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "CityDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\CityDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\CityDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\CityDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\CityDto.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAQwBgAAAAgAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:26:54.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\Shipment\\Create.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Views\\Shipment\\Create.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\Shipment\\Create.cshtml",
+              "RelativeToolTip": "..\\Ui\\Views\\Shipment\\Create.cshtml",
+              "ViewState": "AQIAAEcAAAAAAAAAAAAAAFAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-04T13:13:51.496Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ManagePageControls.js",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\Shipment\\ManagePageControls.js",
+              "RelativeDocumentMoniker": "..\\Ui\\wwwroot\\Modules\\Shipment\\ManagePageControls.js",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\Shipment\\ManagePageControls.js",
+              "RelativeToolTip": "..\\Ui\\wwwroot\\Modules\\Shipment\\ManagePageControls.js",
+              "ViewState": "AQIAADsAAAAAAAAAAAAAAEsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-08-04T13:22:14.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CitiesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\CitiesController.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Controllers\\CitiesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\CitiesController.cs",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Controllers\\CitiesController.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAAAgwBsAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-18T13:38:11.438Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Index.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Index.cshtml",
+              "ViewState": "AQIAACIAAAAAAAAAAAAAACsAAABeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T16:59:41.316Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Edit.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\ShippingTypes\\Edit.cshtml",
+              "ViewState": "AQIAABAAAAAAAAAAAAAAACEAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T16:54:52.774Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Countries\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\Countries\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Countries\\Index.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\Countries\\Index.cshtml",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAEwCoAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-18T13:42:33.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Countries\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\Countries\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Countries\\Edit.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\Countries\\Edit.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACEAAAA/AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-18T13:51:16.051Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Cities\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\Cities\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Cities\\Index.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\Cities\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADIAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T05:34:10.698Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Cities\\Edit.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\Cities\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Cities\\Edit.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\Cities\\Edit.cshtml",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAAAAIAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-23T05:23:57.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "TbShippment.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippment.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbShippment.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippment.cs",
+              "RelativeToolTip": "..\\Domains\\TbShippment.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T07:48:41.709Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "TbCarrier.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbCarrier.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbCarrier.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbCarrier.cs",
+              "RelativeToolTip": "..\\Domains\\TbCarrier.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAABuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T05:44:09.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UserSubscriptionDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\UserSubscriptionDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\UserSubscriptionDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\UserSubscriptionDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\UserSubscriptionDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:29:27.253Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "UserReceiverDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\UserReceiverDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\UserReceiverDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\UserReceiverDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\UserReceiverDto.cs",
+              "ViewState": "AQIAAA0AAAAAAAAAAAAAABIAAAA3AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:29:01.559Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "SubscriptionPackageDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\SubscriptionPackageDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\SubscriptionPackageDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\SubscriptionPackageDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\SubscriptionPackageDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:28:45.798Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ShippmentStatusDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\ShippmentStatusDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\ShippmentStatusDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\ShippmentStatusDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\ShippmentStatusDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:28:35.328Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "ShippmentDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\ShippmentDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\ShippmentDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\ShippmentDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\ShippmentDto.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:28:24.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "ShippingTypeDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\ShippingTypeDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\ShippingTypeDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\ShippingTypeDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\ShippingTypeDto.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAABIAAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:28:13.528Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "SettingDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\SettingDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\SettingDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\SettingDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\SettingDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:27:26.689Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "PaymentMethodDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\PaymentMethodDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\PaymentMethodDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\PaymentMethodDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\PaymentMethodDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAfAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:27:17.998Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\LoginDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\LoginDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\LoginDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABIAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:38:27.553Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "CarrierDto.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\CarrierDto.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Dtos\\CarrierDto.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Dtos\\CarrierDto.cs",
+              "RelativeToolTip": "..\\BL\\Dtos\\CarrierDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T08:26:15.376Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAADMAAAAAAAAAAAAcwEYAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T07:06:30.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "CountriesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\CountriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CountriesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\CountriesController.cs",
+              "RelativeToolTip": "Controllers\\CountriesController.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAcwEEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:24:51.414Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "..\\Ui\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAEIAAAAAAAAAAAAowEwAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T05:31:13.08Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "WeatherForecastController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeDocumentMoniker": "Controllers\\WeatherForecastController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\WeatherForecastController.cs",
+              "RelativeToolTip": "Controllers\\WeatherForecastController.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAAC0AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-02T06:15:46.591Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "ShippingTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\ShippingTypesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ShippingTypesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Controllers\\ShippingTypesController.cs",
+              "RelativeToolTip": "Controllers\\ShippingTypesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAADQAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-07T05:21:45.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Show.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\Shipment\\Show.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Views\\Shipment\\Show.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\Shipment\\Show.cshtml",
+              "RelativeToolTip": "..\\Ui\\Views\\Shipment\\Show.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-08-04T12:21:55.002Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "20250608083325_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Migrations\\20250608083325_InitialCreate.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Migrations\\20250608083325_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Migrations\\20250608083325_InitialCreate.cs",
+              "RelativeToolTip": "..\\DAL\\Migrations\\20250608083325_InitialCreate.cs",
+              "ViewState": "AQIAAPkBAAAAAAAAAAD4vwkCAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T08:33:47.95Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\Ui\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-19T12:03:47.805Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "ViewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Repositories\\ViewRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Repositories\\ViewRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Repositories\\ViewRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Repositories\\ViewRepository.cs",
+              "ViewState": "AQIAADAAAAAAAAAAAABQwCQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T06:50:31.584Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "..\\Ui\\Views\\Account\\Login.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-19T09:46:59.631Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "CityService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\CityService.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Services\\CityService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\CityService.cs",
+              "RelativeToolTip": "..\\BL\\Services\\CityService.cs",
+              "ViewState": "AQIAABUAAAAAAAAAAIBJwB8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T06:58:22.264Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "IViewRepository.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Contracts\\IViewRepository.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Contracts\\IViewRepository.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Contracts\\IViewRepository.cs",
+              "RelativeToolTip": "..\\DAL\\Contracts\\IViewRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T06:48:01.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "ICity.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\ICity.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Contract\\ICity.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\ICity.cs",
+              "RelativeToolTip": "..\\BL\\Contract\\ICity.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-22T06:56:40.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "Messages.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Messages.resx",
+              "RelativeDocumentMoniker": "..\\AppResource\\Messages.resx",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Messages.resx",
+              "RelativeToolTip": "..\\AppResource\\Messages.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-07-07T04:35:53.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-02T07:02:53.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\appsettings.json",
+              "RelativeDocumentMoniker": "..\\Ui\\appsettings.json",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\appsettings.json",
+              "RelativeToolTip": "..\\Ui\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAnAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-02T06:53:06.734Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 59,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Program.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Program.cs",
+              "RelativeToolTip": "..\\Ui\\Program.cs",
+              "ViewState": "AQIAADEAAAAAAAAAAIBJwD8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-13T08:33:18.767Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 60,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\Home\\Index.cshtml",
+              "ViewState": "AQIAAIoBAAAAAAAAAADwv4gBAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T05:45:26.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 61,
+              "Title": "ContextConfig.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Services\\ContextConfig.cs",
+              "RelativeDocumentMoniker": "Services\\ContextConfig.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\WebApi\\Services\\ContextConfig.cs",
+              "RelativeToolTip": "Services\\ContextConfig.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAC8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-28T06:24:06.544Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 62,
+              "Title": "ContextConfig.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Services\\ContextConfig.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Services\\ContextConfig.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Services\\ContextConfig.cs",
+              "RelativeToolTip": "..\\Ui\\Services\\ContextConfig.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAIwDEAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-21T08:43:31.227Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 63,
+              "Title": "20250626135240_refreshTokenTable.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Migrations\\20250626135240_refreshTokenTable.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Migrations\\20250626135240_refreshTokenTable.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Migrations\\20250626135240_refreshTokenTable.cs",
+              "RelativeToolTip": "..\\DAL\\Migrations\\20250626135240_refreshTokenTable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAEBVwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-26T13:52:41.595Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 64,
+              "Title": "BaseTable.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\BaseTable.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\BaseTable.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\BaseTable.cs",
+              "RelativeToolTip": "..\\Domains\\BaseTable.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T06:33:29.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 65,
+              "Title": "Shipping.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Shipping.resx",
+              "RelativeDocumentMoniker": "..\\AppResource\\Shipping.resx",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Shipping.resx",
+              "RelativeToolTip": "..\\AppResource\\Shipping.resx",
+              "ViewState": "AQIAAJIAAAAAAAAAAAAqwKEAAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-25T06:19:22.875Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 66,
+              "Title": "Shipping.ar.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Shipping.ar.resx",
+              "RelativeDocumentMoniker": "..\\AppResource\\Shipping.ar.resx",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Shipping.ar.resx",
+              "RelativeToolTip": "..\\AppResource\\Shipping.ar.resx",
+              "ViewState": "AQIAAIkAAAAAAAAAAABRwKQAAAAaAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-24T17:09:02.999Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 67,
+              "Title": "CountriesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\CountriesController.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Controllers\\CountriesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\CountriesController.cs",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Controllers\\CountriesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAABRwDkAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-23T05:19:47.579Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 68,
+              "Title": "Shipping.ar.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Shipping.ar.resx",
+              "RelativeDocumentMoniker": "..\\AppResource\\Shipping.ar.resx",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Shipping.ar.resx",
+              "RelativeToolTip": "..\\AppResource\\Shipping.ar.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-11T07:09:46.237Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 69,
+              "Title": "Messages.ar.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Messages.ar.resx",
+              "RelativeDocumentMoniker": "..\\AppResource\\Messages.ar.resx",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Messages.ar.resx",
+              "RelativeToolTip": "..\\AppResource\\Messages.ar.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-24T17:10:01.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 70,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AQIAALIAAAAAAAAAAIBZwL4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-11T05:46:36.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 71,
+              "Title": "ShippingTypesController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\ShippingTypesController.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Controllers\\ShippingTypesController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\ShippingTypesController.cs",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Controllers\\ShippingTypesController.cs",
+              "ViewState": "AQIAACoAAAAAAAAAAAAqwD0AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-10T16:47:01.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 72,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Controllers\\HomeController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-19T10:03:47.565Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 73,
+              "Title": "ShippingTypeService.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\ShippingTypeService.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Services\\ShippingTypeService.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Services\\ShippingTypeService.cs",
+              "RelativeToolTip": "..\\BL\\Services\\ShippingTypeService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAABBwA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T05:24:02.294Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 74,
+              "Title": "IShippingType.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\IShippingType.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Contract\\IShippingType.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Contract\\IShippingType.cs",
+              "RelativeToolTip": "..\\BL\\Contract\\IShippingType.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAOAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-14T05:19:19.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 75,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "..\\Ui\\Areas\\admin\\Views\\_ViewImports.cshtml",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Areas\\admin\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "..\\Ui\\Areas\\admin\\Views\\_ViewImports.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-10T16:57:27.033Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 76,
+              "Title": "IMapper.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Mapping\\IMapper.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Mapping\\IMapper.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Mapping\\IMapper.cs",
+              "RelativeToolTip": "..\\BL\\Mapping\\IMapper.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAgwAsAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T07:28:11.545Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 77,
+              "Title": "AutoMapper.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Mapping\\AutoMapper.cs",
+              "RelativeDocumentMoniker": "..\\BL\\Mapping\\AutoMapper.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\Mapping\\AutoMapper.cs",
+              "RelativeToolTip": "..\\BL\\Mapping\\AutoMapper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAIBZwAsAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-15T07:30:27.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 79,
+              "Title": "Alerts.js",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\App\\Shared\\Alerts.js",
+              "RelativeDocumentMoniker": "..\\Ui\\wwwroot\\App\\Shared\\Alerts.js",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\App\\Shared\\Alerts.js",
+              "RelativeToolTip": "..\\Ui\\wwwroot\\App\\Shared\\Alerts.js",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-06-12T12:52:37.785Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 78,
+              "Title": "MessageTypes.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Helpers\\MessageTypes.cs",
+              "RelativeDocumentMoniker": "..\\Ui\\Helpers\\MessageTypes.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\Helpers\\MessageTypes.cs",
+              "RelativeToolTip": "..\\Ui\\Helpers\\MessageTypes.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-12T13:20:09.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 80,
+              "Title": "Actions.ar.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Actions.ar.resx",
+              "RelativeDocumentMoniker": "..\\AppResource\\Actions.ar.resx",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Actions.ar.resx",
+              "RelativeToolTip": "..\\AppResource\\Actions.ar.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-11T06:57:05.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 81,
+              "Title": "Actions.resx",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Actions.resx",
+              "RelativeDocumentMoniker": "..\\AppResource\\Actions.resx",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\AppResource\\Actions.resx",
+              "RelativeToolTip": "..\\AppResource\\Actions.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2025-06-11T06:55:40.924Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 82,
+              "Title": "ShippingContextFactory.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Data\\ShippingContextFactory.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Data\\ShippingContextFactory.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Data\\ShippingContextFactory.cs",
+              "RelativeToolTip": "..\\DAL\\Data\\ShippingContextFactory.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAMBdwBAAAABPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-08T08:31:30.359Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 83,
+              "Title": "DataAccessException.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Exceptions\\DataAccessException.cs",
+              "RelativeDocumentMoniker": "..\\DAL\\Exceptions\\DataAccessException.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\Exceptions\\DataAccessException.cs",
+              "RelativeToolTip": "..\\DAL\\Exceptions\\DataAccessException.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAxwA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T13:08:52.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 84,
+              "Title": "DAL.csproj",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\DAL.csproj",
+              "RelativeDocumentMoniker": "..\\DAL\\DAL.csproj",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\DAL\\DAL.csproj",
+              "RelativeToolTip": "..\\DAL\\DAL.csproj",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAuwCIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-08T07:15:08.662Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 86,
+              "Title": "TbSettings.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSettings.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbSettings.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSettings.cs",
+              "RelativeToolTip": "..\\Domains\\TbSettings.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T06:44:03.351Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 87,
+              "Title": "TbShippingTypes.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippingTypes.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbShippingTypes.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippingTypes.cs",
+              "RelativeToolTip": "..\\Domains\\TbShippingTypes.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T06:44:24.417Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 88,
+              "Title": "TbUserReceivers.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserReceivers.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbUserReceivers.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserReceivers.cs",
+              "RelativeToolTip": "..\\Domains\\TbUserReceivers.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T07:00:07.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 85,
+              "Title": "BL.csproj",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\BL.csproj",
+              "RelativeDocumentMoniker": "..\\BL\\BL.csproj",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\BL.csproj",
+              "RelativeToolTip": "..\\BL\\BL.csproj",
+              "ViewState": "AQIAAAQAAAAAAAAAAABxwBQAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-10-14T07:03:56.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 89,
+              "Title": "TbUserSubscriptions.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserSubscriptions.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbUserSubscriptions.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserSubscriptions.cs",
+              "RelativeToolTip": "..\\Domains\\TbUserSubscriptions.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T07:06:11.358Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 90,
+              "Title": "TbUserSebders.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserSebders.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbUserSebders.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbUserSebders.cs",
+              "RelativeToolTip": "..\\Domains\\TbUserSebders.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T07:03:07.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 91,
+              "Title": "TbSubscriptionPackages.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSubscriptionPackages.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbSubscriptionPackages.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbSubscriptionPackages.cs",
+              "RelativeToolTip": "..\\Domains\\TbSubscriptionPackages.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-12T06:57:21.041Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 92,
+              "Title": "TbShippments.cs",
+              "DocumentMoniker": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippments.cs",
+              "RelativeDocumentMoniker": "..\\Domains\\TbShippments.cs",
+              "ToolTip": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Domains\\TbShippments.cs",
+              "RelativeToolTip": "..\\Domains\\TbShippments.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-10-07T07:07:51.333Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+﻿@model List<CityDto>
+
+@section Styles
+{
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <!-- End plugin css for this page -->
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> @Labels.Cities </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">@Labels.Cities</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data table</li>
+            </ol>
+        </nav>
+    </div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"></h4>
+            <div class="row">
+                <div class="col-12">
+                </div>
+                <div class="col-12">
+
+                    <a href="/Admin/Cities/Edit" class="btn btn-success btn-fw">@Actions.AddNew</a>
+
+                    <table id="order-listing" class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>@Labels.NameAr </th>
+                                <th>@Labels.NameEn </th>
+                                <th>@Shipping.CountryName </th>
+                                <th>@Labels.Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var Citites in Model)
+                            {
+                                <tr>
+                                    <td class="col-md-8"> @Citites.CityAname</td>
+                                    <td class="col-md-8"> @Citites.CityEname</td>
+                                    <td class="col-md-8"> @Citites.CountryAname</td>
+                                    <td class="col-md-4">
+                                        <a style="height:max-content"
+                                           asp-controller="Cities" asp-action="Edit" asp-route-Id="@Citites.Id"
+                                           class="btn btn-info btn-fw">@Actions.Edit</a>
+
+                                        @*<a asp-controller="Countries" asp-action="Delete" asp-route-Id="@Countries.Id"
+                                    class="btn btn-danger btn-fw" data-id="@Countries.Id"
+                                    >@Actions.Delete</a> *@
+                                        <button type="button" class="btn btn-danger btn-fw" data-id="@Citites.Id">@Actions.Delete</button>
+
+                                    </td>
+                                </tr>
+                            }
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <!-- plugins:js -->
+    <script src="~/Admin/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Admin/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="~/Admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page -->
+    <script src="~/Admin/js/data-table.js"></script>
+    <!-- End custom js for this page -->
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-danger').on('click', function (e) {
+                var id = $(this).data('id');
+                var deleteUrl = '@Url.Action("Delete", "Cities")';
+
+                alert.ConfirmDelete(function (result) {
+                    if (result) {
+                        // Redirect to the delete action with the city ID
+                        window.location.href = deleteUrl + '?id=' + id;
+                    }
+                });
+
+            });
+        });
+    </script>
+
+    @if (TempData["MessageType"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                let messageType = @TempData["MessageType"];
+                console.log(messageType);
+                switch (messageType) {
+                    case 1:
+                        alert.Success('@Messages.SaveSuccessTitle', '@Messages.SaveSuccessMessage');
+                        break;
+                    case 2:
+                        alert.Error('@Messages.SaveFailedTitle', '@Messages.SaveFailedMessage');
+                        break;
+                    case 3:
+                        alert.Success('@Messages.DeleteSuccessTitle', '@Messages.DeleteSucessMessage');
+                        break;
+                    case 4:
+                        alert.Error('@Messages.DeleteFailedTitle', '@Messages.DeleteFailedMessage');
+                        break;
+                    default:
+                        console.log("Unknown message type");
+                        break;
+                }
+            });
+        </script>
+    }
+
+}
+<!-- content-wrapper ends -->

@@ -1,0 +1,48 @@
+﻿@model CountryDto
+
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> @Labels.Countries </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Forms</a></li>
+                <li class="breadcrumb-item active" aria-current="page"></li>
+            </ol>
+        </nav>
+    </div>
+    <div class="row">
+        <div class="col-md-8 grid-margin stretch-card">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title"></h4>
+                    <p class="card-description"> Basic form layout </p>
+                    <form class="forms-sample" method="post" enctype="multipart/form-data"
+                          asp-controller="Countries" asp-action="Save" role="form">
+                          @* the hidden feild is to save the value to pass it to the (Save action)  *@
+                          <input asp-for="Id" type="hidden"  />
+   
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@Labels.NameAr</label>
+                            <input asp-for="CountryAname" type="text" class="form-control" placeholder="@Labels.NameAr">
+                            <span asp-validation-for="CountryAname" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@Labels.NameEn</label>
+                            <input asp-for="CountryEname" type="text" class="form-control" placeholder="@Labels.NameEn">
+                            <span asp-validation-for="CountryEname" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" formmethod="post" class="btn btn-gradient-primary me-2">@Actions.Save</button>
+                        <button class="btn btn-light">@Actions.Clear</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+

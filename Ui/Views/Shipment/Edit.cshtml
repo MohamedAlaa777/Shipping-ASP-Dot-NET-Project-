@@ -1,0 +1,509 @@
+﻿<!-- Breadcroumbs end -->
+<!-- Create New Shipment Start -->
+<div class="wshipping-content-block shipping-block">
+    <div class="container">
+        <h2 class="heading2-border mt0">Create New Shipping</h2>
+        <div class="row">
+            <div class="shipping-form-block">
+                <form class="steps" accept-charset="UTF-8" enctype="multipart/form-data">
+                    <!-- progressbar -->
+                    <ul id="progressbar">
+                        <li class="active">Where From</li>
+                        <li>Where Going</li>
+                        <li>What</li>
+                        <li>How</li>
+                        <li>Payment</li>
+                        <li>Review</li>
+                        <li>Complete</li>
+                    </ul>
+                    <!-- fieldsets Shipping From Start-->
+                    <fieldset>
+                        <h2 class="fs-title">Hello. Where are you shipping from? <a href="" title="" class="login-btn-form">Login</a></h2>
+                        <h3 class="fs-subtitle">* Indicates required field </h3>
+                        <div class="shipping-form">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Country<sup>*</sup></label>
+                                        <select name="Sendercountry" class="form-control">
+                                            <option>United States</option>
+                                            <option>Canada</option>
+                                            <option>France</option>
+                                            <option>Germany</option>
+                                            <option>Greece</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Company or Name<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="SenderName" required="required" />
+                                        <span class="error1" style="display: none;"> <i class="error-log fa fa-exclamation-triangle"></i> </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Contact<sup>*</sup></label>
+                                        <input type="text" class="form-control" required="required" name="Contact" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label>Address<sup>*</sup></label>
+                                        <input type="text" class="form-control" required="required" name="Address" placeholder="Street Address" />
+                                    </div>
+                                </div>
+                                @*                                 <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="empty">&nbsp;</label>
+                                        <input type="text" class="form-control" name="address2" placeholder="Apartment, suite, unit, building, floor, etc." />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="empty">&nbsp;</label>
+                                        <input type="text" class="form-control" name="address3" placeholder="Department, c/o, etc." />
+                                    </div>
+                                </div> *@
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Postal Code<sup>*</sup></label>
+                                        <input type="text" class="form-control" required="required" name="PostalCode" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>City<sup>*</sup></label>
+                                        <select name="SenderCityId" class="form-control" required="required">
+                                            <option>United States</option>
+                                            <option>Canada</option>
+                                            <option>France</option>
+                                            <option>Germany</option>
+                                            <option>Greece</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Other Address Information</label>
+                                        <input type="text" class="form-control" name="OtherAddress" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>E-mail <sup>*</sup></label>
+                                        <input type="email" class="form-control" name="Email" required="required" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Phone<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="Phone" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label class="slide-label">Use this as my default address </label>
+                                        <div class="slide-redio">
+                                            <input type="checkbox" value="None" id="IsDefaultSender" name="check" checked />
+                                            <label for="slide-radio2"></label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" name="next" class="next action-button" value="Continue" />
+                        <input type="reset" name="cancel" class="action-button btn-red" value="Cancel Shipment" />
+
+                        <input type="button" name="btnPost" onclick="ShipmentService.TestUser();" class="next action-button" value="Post" />
+                    </fieldset>
+                    <!-- fieldsets Shipping From end-->
+                    <!-- fieldsets Shipping going Start-->
+                    <fieldset>
+                        <h2 class="fs-title">Where is your shipping going? <a href="" title="" class="login-btn-form">Login</a></h2>
+                        <div class="row">
+                            <div class="col-12 col-lg-4">
+                                <div class="ship-address">
+                                    <h4>Ship from <a href="" title="Edit" class="btn-edit">Edit</a></h4>
+                                    <p>
+                                        Lorem Ipsum is simply dummy text<br>
+                                        of the printing and typesetting industry
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-4">
+                                <div class="ship-address">
+                                    <h4>Return to <a href="" title="Edit" class="btn-edit">Edit</a></h4>
+                                    <p>
+                                        Lorem Ipsum is simplydummy text of the<br>
+                                        printing and typesetting industry
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="fs-subtitle">* Indicates required field </h3>
+                        <div class="shipping-form">
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <label>Country<sup>*</sup></label>
+                                    <select name="ReciverCountry" class="form-control" required="required">
+                                        <option>United States</option>
+                                        <option>Canada</option>
+                                        <option>France</option>
+                                        <option>Germany</option>
+                                        <option>Greece</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Company or Name<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="ReciverName" required="required" />
+                                        <span class="error1" style="display: none;"> <i class="error-log fa fa-exclamation-triangle"></i> </span>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Contact<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="ReciverContact" required="required" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-12">
+                                    <div class="form-group">
+                                        <label>Address<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="ReciverAddress" required="required" placeholder="Street Address" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Postal Code<sup>*</sup></label>
+                                        <input type="text" class="form-control" required="required" name="ReciverPostalCode" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>City<sup>*</sup></label>
+                                        <select name="ReciverCity" class="form-control" required="required">
+                                            <option>United States</option>
+                                            <option>Canada</option>
+                                            <option>France</option>
+                                            <option>Germany</option>
+                                            <option>Greece</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Other Address<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="ReciverOtherAddress" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>E-mail <sup>*</sup></label>
+                                        <input type="email" class="form-control" name="ReciverEmail" />
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="form-group">
+                                        <label>Phone<sup>*</sup></label>
+                                        <input type="text" class="form-control" name="ReciverPhone" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-12">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Continue" />
+                        <input type="reset" name="cancel" class="action-button btn-red" value="Cancel Shipment" />
+                    </fieldset>
+                    <!-- fieldsets Shipping going end-->
+                    <!-- fieldsets package Start-->
+                    <fieldset>
+                        <h2 class="fs-title">What kind of packaging are you using? <a href="" title="" class="login-btn-form">Login</a></h2>
+                        <h3 class="fs-subtitle">* Indicates required field </h3>
+                        <div class="shipping-form">
+                            <div class="row">
+                                <div class="col-12 col-lg-8">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label>ٍٍShipping Packaging <sup>*</sup></label>
+                                                <div class="input-comment">
+                                                    <select name="PackageType" class="form-control">
+                                                        <option>Customer packaging</option>
+                                                        <option>2kg</option>
+                                                        <option>10kg</option>
+                                                        <option>20kg</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label>Weight<sup>*</sup></label>
+                                                <div class="input-comment">
+                                                    <input type="text" class="form-control" name="Weight" required="required" />
+                                                    <span class="error1" style="display: none;"> <i class="error-log fa fa-exclamation-triangle"></i> </span> <span class="field-comment">lbs</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label>Length</label>
+                                                <div class="input-comment">
+                                                    <input type="text" class="form-control" name="Length" />
+                                                    <span class="field-comment">in</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label>Width</label>
+                                                <div class="input-comment">
+                                                    <input type="text" class="form-control" name="Width" />
+                                                    <span class="field-comment">in</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label>Height</label>
+                                                <div class="input-comment">
+                                                    <input type="text" class="form-control" name="Height" />
+                                                    <span class="field-comment">in</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-6">
+                                            <div class="form-group">
+                                                <label>Declared value</label>
+                                                <div class="input-comment">
+                                                    <input type="text" class="form-control" name="PackageValue" />
+                                                    <span class="field-comment">USD</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-lg-4">
+                                    <div class="what-package"><img src="assets/images/package.jpg" alt="" /></div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Continue" />
+                        <input type="reset" name="cancel" class="action-button btn-red" value="Cancel Shipment" />
+                    </fieldset>
+                    <!-- fieldsets package end-->
+                    <!-- fieldsets pick up Start-->
+                    <fieldset>
+                        <h2 class="fs-title">How would you like to ship? <a href="" title="" class="login-btn-form">Login</a></h2>
+                        <h3 class="fs-subtitle">* Indicates required field </h3>
+                        <div class="shipping-form dropoff-block">
+                            <h3>Whould you like us to pick up your shipment?</h3>
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="nav-item"><a class="nav-link active" href="#no-drop" aria-controls="no-drop" role="tab" data-toggle="tab">No I'll drop it off</a></li>
+                                <li class="or-text">--or--</li>
+                                <li class="nav-item"><a class="nav-link" href="#yes-drop" aria-controls="yes-drop" role="tab" data-toggle="tab">Yes pick up my shipment</a></li>
+                            </ul>
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="no-drop">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label>Dropoff date:</label>
+                                                <div class="datepicker-group">
+                                                    <input type="text" class="form-control datetimepicker1" placeholder="Date" />
+                                                    <div class="datepicker-icon"><i class="fa fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <h3>When would like it delivered?</h3>
+                                    <div class="row">
+                                        <div class="col-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label>Date and short details:</label>
+                                                <input type="text" class="form-control" name="sDetails" />
+                                            </div>
+                                        </div>
+                                        <div class="col-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label>Shipping Types</label>
+                                                <div class="input-comment">
+                                                    <select name="ShippingType" class="form-control">
+                                                        <option>Customer packaging</option>
+                                                        <option>2kg</option>
+                                                        <option>10kg</option>
+                                                        <option>20kg</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="yes-drop">
+                                    <div class="row">
+                                        <div class="col-12 col-lg-4">
+                                            <div class="form-group">
+                                                <label>Pickup date:</label>
+                                                <div class="datepicker-group">
+                                                    <input type="text" class="form-control datetimepicker1" placeholder="Date" />
+                                                    <div class="datepicker-icon"><i class="fa fa-calendar-alt"></i></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review">
+                                        <h3>Pickup Address <a href="" title="Edit" class="btn-edit">Edit</a></h3>
+                                        <p>
+                                            Lorem Ipsum is simply dummy text<br>
+                                            of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                                        </p>
+                                    </div>
+                                    <div class="review">
+                                        <h3>Pickup Details <a href="" title="Edit" class="btn-edit">Edit</a></h3>
+                                        <p>
+                                            Your pickup window: 9:00AM - 7:00PM<br>
+                                            Pickup location: Front Door
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Continue" />
+                        <input type="reset" name="cancel" class="action-button btn-red" value="Cancel Shipment" />
+                    </fieldset>
+                    <!-- fieldsets package end-->
+                    <!-- fieldsets Review Start-->
+                    <fieldset>
+                        <h2 class="fs-title">Let's make sure everyting is in order</h2>
+                        <div class="shipping-form">
+                            <div class="review">
+                                <h3>Where <a href="" title="Edit" class="btn-edit">Edit</a></h3>
+                                <div class="row">
+                                    <div class="col-12 col-lg-4">
+                                        <div class="ship-address">
+                                            <h4>Ship from</h4>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text<br>
+                                                of the printing and typesetting industry
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <div class="ship-address">
+                                            <h4>Ship to</h4>
+                                            <p>
+                                                Lorem Ipsum is simplydummy text of the<br>
+                                                printing and typesetting industry
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="col-12 col-lg-4">
+                                        <div class="ship-address">
+                                            <h4>Return to</h4>
+                                            <p>
+                                                Lorem Ipsum is simplydummy text of the<br>
+                                                printing and typesetting industry
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <h3>What <a href="" title="Edit" class="btn-edit">Edit</a></h3>
+                                <h5>Shipment information</h5>
+                                <ul>
+                                    <li><b>Actual Weight:</b> 60 lbs</li>
+                                    <li><b>Total Bilable Weight:</b> 60 lbs</li>
+                                </ul>
+                                <h5>Package information</h5>
+                                <ul>
+                                    <li><b>Weight:</b> 60 lbs</li>
+                                    <li><b>Dimensions:</b> 17x13x11 in</li>
+                                    <li><b>Declared value:</b> $100</li>
+                                </ul>
+                            </div>
+                            <div class="review">
+                                <h3>How <a href="" title="Edit" class="btn-edit">Edit</a></h3>
+                                <h5>Service Selection</h5>
+                                <p>It has survived not only five centuries,</p>
+                                <h5>Arrival</h5>
+                                <p>Mon, Nov6, 2017, End of the day</p>
+                            </div>
+                            <div class="review">
+                                <h3>Aditional Option <a href="" title="Edit" class="btn-edit">Edit</a></h3>
+                                <p>N/A</p>
+                            </div>
+                            <div class="review">
+                                <h3>Payment <a href="" title="Edit" class="btn-edit">Edit</a></h3>
+                                <h5>Bill Shipping Charge to:</h5>
+                                <p>Paypal</p>
+                                <h5>Bill Duties and Taxes to:</h5>
+                                <p>Receive Company name</p>
+                                <h5>Enter Promo Code:</h5>
+                                <div class="promoCode-input">
+                                    <input type="text" class="form-control" name="sDetails" />
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="checkbox">
+                                    <input type="checkbox" name="remember" id="trems" class="css-checkbox" />
+                                    <label for="trems" class="css-label">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.</label>
+                                </div>
+                            </div>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button" value="Previous" />
+                        <input type="button" name="next" class="next action-button" value="Continue" />
+                    </fieldset>
+                    <!-- fieldsets payment Start-->
+                    <fieldset>
+                        <div class="shipping-form">
+                            <h1 class="tanks-message">Thank You For Create Shipping</h1>
+                        </div>
+                        <input type="submit" name="submit" class="submit action-button" value="Submit" />
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Create New Shipment end -->
+@section Scripts
+{
+    <script src="~/modules/apphelper.js"></script>
+    <script src="~/modules/apiclient.js"></script>
+    <script src="~/modules/countriesservice.js"></script>
+    <script src="~/modules/cititesservice.js"></script>
+    <script src="~/modules/shippingtypesservice.js"></script>
+    <script src="~/modules/shippingpackgingservice.js"></script>
+    <script src="~/modules/shipment/shipmentservice.js"></script>
+    <script src="~/modules/shipment/managepagecontrols.js"></script>
+    <script src="~/modules/shipment/pageevents.js"></script>
+    <script src="~/modules/shipment/show.js"></script>
+    <script src="~/modules/shipment/edit.js"></script>
+}

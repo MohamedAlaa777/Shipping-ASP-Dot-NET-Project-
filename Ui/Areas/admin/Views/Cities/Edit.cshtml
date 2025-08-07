@@ -1,0 +1,56 @@
+﻿@model CityDto
+@{
+    var countries =ViewBag.Countries;
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> @Labels.Countries </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#"></a></li>
+                <li class="breadcrumb-item active" aria-current="page">Form elements</li>
+            </ol>
+        </nav>
+    </div>
+
+    <form class="forms-sample" method="post" enctype="multipart/form-data"
+          asp-controller="Cities" asp-action="Save" role="form">
+        <div class="row">
+
+            <div class="col-md-12 grid-margin stretch-card">
+                <div class="card">
+                    <div class="card-body">
+                        <h4 class="card-title">@Labels.Countries</h4>
+                        <p class="card-description">  </p>
+
+                        <input asp-for="Id" type="hidden" />
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@Labels.NameAr</label>
+                            <input asp-for="CityAname" type="text" class="form-control" placeholder="@Labels.NameAr">
+                            <span asp-validation-for="CityAname" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@Labels.NameEn</label>
+                            <input asp-for="CityEname" type="text" class="form-control" placeholder="@Labels.NameEn">
+                            <span asp-validation-for="CityEname" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="exampleInputUsername1">@Shipping.CountryName</label>
+                            <select asp-for="CountryId" class="form-control"
+                                    asp-items="@(new SelectList(countries, "Id", "CountryAname"))">
+                            </select>
+                            <span asp-validation-for="CountryId" class="text-danger"></span>
+                        </div>
+
+                        <button type="submit" formmethod="post" class="btn btn-gradient-primary me-2">@Actions.Save</button>
+                        <button class="btn btn-light">@Actions.Clear</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

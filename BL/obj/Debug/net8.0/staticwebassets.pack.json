@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\BL.bundle.scp.css",
+      "PackagePath": "staticwebassets\\BL.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\wwwroot\\background.png",
+      "PackagePath": "staticwebassets\\background.png"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\BL\\wwwroot\\exampleJsInterop.js",
+      "PackagePath": "staticwebassets\\exampleJsInterop.js"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.BL.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.BL.props",
+      "PackagePath": "build\\BL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BL.props",
+      "PackagePath": "buildMultiTargeting\\BL.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.BL.props",
+      "PackagePath": "buildTransitive\\BL.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

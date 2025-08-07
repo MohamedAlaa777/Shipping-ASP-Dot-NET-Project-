@@ -1,0 +1,88 @@
+﻿@model UserDto
+
+<!-- Breadcroumbs start -->
+<div class="wshipping-content-block wshipping-breadcroumb inner-bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <h1>Customer Registration</h1>
+                <a href="index.html" title="Home">Home</a> / Customer Registration
+            </div>
+            <div class="col-12 col-lg-5 text-right">
+                <h4>
+                    We freight to all over the world
+                    The best logistic company, <span>FAST</span> and <span>SAFELY!</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcroumbs end -->
+<!-- Customer Registration Start -->
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="customer-login">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="customer-login-left">
+                        <div class="login-icon"><i class="fa fa-unlock-alt"></i></div>
+                        <h4>Welcome To new account</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                        <a href="#">If you have account already, please login in</a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-6">
+                    <div class="customer-login-block">
+                        <h2>Registration</h2>
+                        <form asp-controller="Account" asp-action="Register" method="post" role="form">
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <label>First Name:</label>
+                                        <input asp-for="FirstName" type="text" class="form-control"  />
+                                        <span asp-validation-for="FirstName" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <label>Last Name:</label>
+                                        <input asp-for="LastName" type="text" class="form-control"  />
+                                        <span asp-validation-for="LastName" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <label>Email:</label>
+                                        <input asp-for="Email" type="email" class="form-control"  />
+                                        <span asp-validation-for="Email" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <label>Phone:</label>
+                                        <input asp-for="Phone" type="text" class="form-control"  />
+                                        <span asp-validation-for="Phone" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <label>Password:</label>
+                                        <input asp-for="Password" type="password" class="form-control" />
+                                        <span asp-validation-for="Password" class="text-danger"></span>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-lg-6">
+                                        <label>Confirm Password:</label>
+                                        <input asp-for="ConfirmPassword" type="password" class="form-control" />
+                                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-submit">Registration</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Customer Registration end -->

@@ -1,0 +1,526 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!-- Slider Start -->
+<div class="homepage-slides-wrapper">
+    <div class="owl-carousel homepage-slides text-center">
+        <!-- Slider item1 start-->
+        <div class="single-slide-item slider-overlay slide-bg-1">
+            <div class="item-table">
+                <div class="item-tablecell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <h3>We are proud</h3>
+                                <h2>To be always on demand</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                <a href="#" class="wshipping-button slide-btn">Contact Weth Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider item1 end-->
+        <!-- Slider item2 start-->
+        <div class="single-slide-item slider-overlay slide-bg-2">
+            <div class="item-table">
+                <div class="item-tablecell">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-10 offset-lg-1">
+                                <h3>We are active</h3>
+                                <h2>To ship your product trusted</h2>
+                                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                <a href="#" class="wshipping-button slide-btn">Get Free Quote</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Slider item2 end-->
+    </div>
+</div>
+<!-- Slider End -->
+<!-- Tracking start -->
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <div class="section-title wow fadeInUp">
+                    <h2>Track a shipment</h2>
+                    <p>Track your LTL, truckload, or intermodal shipment by entering your <span>Track number</span> below to get instant freight tracking information.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <div class="tracking-block">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li class="nav-item"><a class="nav-link active" href="#track-by-number" aria-controls="track-by-number" role="tab" data-toggle="tab">Track by Number</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#track-by-reference" aria-controls="track-by-reference" role="tab" data-toggle="tab">Track by Reference</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div role="tabpanel" class="tab-pane active" id="track-by-number">
+                            <h3>Air Freight Tracking</h3>
+                            <div class="put-track-number">
+                                <form action="track.html">
+                                    <input type="text" class="form-control track-id" name="trackid" placeholder="Track ID" />
+                                    <button type="submit" class="btn btn-track">Track</button>
+                                </form>
+                            </div>
+                            <div class="track-bottom-link"><a href="">Need Help?</a> <span>|</span> <a href="">Your Order list</a></div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="track-by-reference">
+                            <div class="put-reference-number">
+                                <form action="customer-register.html">
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <label>Shipment Reference (BOL or PO):</label>
+                                                <input type="text" class="form-control" name="RefNumber" required />
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <label>Shipment Date Start:</label>
+                                                <div class="input-group date" data-provide="datepicker">
+                                                    <input type="text" class="form-control" name="startDate" required />
+                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-th"></span></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-4">
+                                                <label>Shipment Date End:</label>
+                                                <div class="input-group date" data-provide="datepicker">
+                                                    <input type="text" class="form-control" name="EndDate" required />
+                                                    <div class="input-group-addon"><span class="glyphicon glyphicon-th"></span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 col-lg-6">
+                                                <label>Origin Country:</label>
+                                                <select class="form-control" name="OriginCountry">
+                                                    <option>United State</option>
+                                                    <option>Canada</option>
+                                                    <option>Maxico</option>
+                                                    <option>Caina</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-6">
+                                                <label>Origin ZIP/Postal Code:</label>
+                                                <input type="text" class="form-control" name="OriginZip" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6 col-lg-6">
+                                                <label>Destination Country: </label>
+                                                <select class="form-control" name="dcountry">
+                                                    <option>United State</option>
+                                                    <option>Canada</option>
+                                                    <option>Maxico</option>
+                                                    <option>Caina</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-12 col-md-6 col-lg-6">
+                                                <label>Destination ZIP/Postal Code:</label>
+                                                <input type="text" class="form-control" name="DZip" required />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-submit">Track</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Tracking end -->
+<!-- Service start -->
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <div class="section-title wow fadeInUp">
+                    <h2>Our Services</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-1"></div>
+                    <div class="service-content">
+                        <h4>Ocean Freight Shipping</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="single-services.html" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-2"></div>
+                    <div class="service-content">
+                        <h4>Air Freight Shipping</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="single-services.html" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-3"></div>
+                    <div class="service-content">
+                        <h4>Car Shipping</h4>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="single-services.html" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service End -->
+<!-- we peovide start -->
+<div class="wshipping-content-block provided-block text-center">
+    <div class="item-table">
+        <div class="item-tablecell">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 wow fadeInUp">
+                        <h3 class="text-uppercase">We Provide</h3>
+                        <h1 class="text-uppercase">the Best Sea and Air Freight Services</h1>
+                        <h2>For Book Your Shipping From any Country</h2>
+                        <a href="contact.html" class="wshipping-button cta-btn">Contact Weth Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- we provide end -->
+<!-- Why Choose start -->
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-4 wow fadeInLeft"> <img src="/assets/images/why-choose-us.jpg" alt="" /> </div>
+            <div class="col-12 col-lg-4">
+                <div class="why-choose-us-content wow fadeInUp">
+                    <h3 class="heading3-border text-uppercase">Why Choose Us?</h3>
+                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
+                    <p>The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. </p>
+                    <a href="about.html" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="why-choose-us wow fadeInRight">
+                    <div class="why-choose-us-icon"> <i class="far fa-handshake"></i> We Are Trusted </div>
+                    <div class="why-choose-us-icon"> <i class="fa fa-unlock-alt"></i> The Best Security </div>
+                    <div class="why-choose-us-icon"> <i class="far fa-thumbs-up"></i> 100% guarantee </div>
+                    <div class="why-choose-us-icon"> <i class="fas fa-map-marker-alt"></i> Quick Location </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- why choose End -->
+<!-- Service process start -->
+<div class="wshipping-content-block service-process">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <div class="section-title">
+                    <h2>Our Service Process</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+        <div class="process-row">
+            <div class="process-step">
+                <div class="process-icon"> <span>1</span> <img src="/assets/images/process-icon1.png" alt="" /> </div>
+                <p>Select Freight</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon"> <span>2</span> <img src="/assets/images/process-icon2.png" alt="" /> </div>
+                <p>Create Invoice</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon"> <span>3</span> <img src="/assets/images/process-icon3.png" alt="" /> </div>
+                <p>Secure Payment</p>
+            </div>
+            <div class="process-step">
+                <div class="process-icon"> <span>4</span> <img src="/assets/images/process-icon4.png" alt="" /> </div>
+                <p>Fast Delivery</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- service process start -->
+<!-- Get Quote start -->
+<div class="wshipping-content-block home-quote">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 wow fadeInLeft">
+                <h2>GET A FREE QUOTE</h2>
+                <h6>we always use best & fastest fleets</h6>
+                <div class="quote-form">
+                    <form data-toggle="validator" action="index.html">
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <input class="form-control" data-error="Please enter name field." id="inputName" placeholder="Full Name" type="text" required />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Email" required />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="inputMobile" placeholder="Mobile" required />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="DestinationFrom" placeholder="Destination From" required />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="DestinationTo" placeholder="Destination To" required />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="ShippingType" placeholder="Shipping Type" required />
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-lg-6">
+                                <div class="form-group">
+                                    <div class="datepicker-group">
+                                        <input type="text" class="form-control datetimepicker1" placeholder="Date" />
+                                        <div class="datepicker-icon"><i class="fa fa-calendar-alt"></i></div>
+                                    </div>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <textarea class="form-control text-area" data-error="Please enter Message." id="textMessage" placeholder="Message" required></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <button class="wshipping-button cta-btn" type="submit">Send us quote</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Get quote End -->
+<!-- Latest blog start -->
+<div class="wshipping-content-block pb40">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-title wow fadeInUp">
+                    <h2>Latest Blog Post</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="blog-item wow fadeInUp">
+                    <div class="blog-item-bg blog-bg-1"></div>
+                    <div class="blog-content">
+                        <h3>Shipping container all international transport</h3>
+                        <div class="blog-post-by">
+                            <ul>
+                                <li><i class="fa fa-calendar"></i>18 March 2017</li>
+                                <li><i class="fa fa-user"></i>By Admin</li>
+                            </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aeneanssa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                        <a href="single-blog.html" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="blog-item wow fadeInUp">
+                    <div class="blog-item-bg blog-bg-2"></div>
+                    <div class="blog-content">
+                        <h3>Lorem Ipsum is simply dummy text of the printing.</h3>
+                        <div class="blog-post-by">
+                            <ul>
+                                <li><i class="fa fa-calendar"></i>18 March 2017</li>
+                                <li><i class="fa fa-user"></i>By Admin</li>
+                            </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aeneanssa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                        <a href="single-blog.html" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="blog-item wow fadeInUp">
+                    <div class="blog-item-bg blog-bg-3"></div>
+                    <div class="blog-content">
+                        <h3>All Shipping container  are international transport</h3>
+                        <div class="blog-post-by">
+                            <ul>
+                                <li><i class="fa fa-calendar"></i>18 March 2017</li>
+                                <li><i class="fa fa-user"></i>By Admin</li>
+                            </ul>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor aeneanssa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p>
+                        <a href="single-blog.html" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Latest blog End -->
+<!-- Counter start -->
+<div class="wshipping-content-block counter-section">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="counter-block">
+                    <span class="counter-icon"><i class="fa fa-folder-open"></i></span>
+                    <p><span class="counter" data-count="578">0</span> Project Done</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="counter-block">
+                    <span class="counter-icon"><i class="fas fa-users"></i></span>
+                    <p><span class="counter" data-count="347">0</span> Permanent Clients</p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="counter-block">
+                    <span class="counter-icon"><i class="fa fa-truck"></i></span>
+                    <p><span class="counter" data-count="128">0</span> Owned Vehicles </p>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="counter-block">
+                    <span class="counter-icon"><i class="fa fa-male"></i></span>
+                    <p><span class="counter" data-count="67">0</span> Support Member</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Counter End -->
+<!-- News &amp; Testimonials Start -->
+<div class="wshipping-content-block news-testimonial-block">
+    <div class="container wow fadeInUp">
+        <div class="row">
+            <!-- Latest News Start -->
+            <div class="col-12 col-lg-5">
+                <h3 class="heading3-border text-uppercase">Latest News</h3>
+                <div class="latest-news-section mt0 wow fadeInUp">
+                    <div class="news-date"> 28<span>Feb</span> </div>
+                    <h4>News Title</h4>
+                    <div class="news-post-by">By <span>Admin</span></div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+                <div class="latest-news-section wow fadeInUp">
+                    <div class="news-date"> 23<span>Mar</span> </div>
+                    <h4>News Title</h4>
+                    <div class="news-post-by">By <span>Admin</span></div>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+            <!-- Latest News End -->
+            <!-- Testimonial start -->
+            <div class="col-12 col-lg-7 home-testimonial">
+                <h3 class="heading3-border text-uppercase">Testimonial</h3>
+                <div class="owl-carousel testimonial">
+                    <div class="testimonial-item">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <div class="testimonial-img-bg"></div>
+                            </div>
+                            <div class="col-md-7">
+                                <div class="testimonial-content">
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-item">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-5">
+                                <div class="testimonial-img-bg"></div>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-7">
+                                <div class="testimonial-content">
+                                    <p>22Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Testimonial end -->
+        </div>
+    </div>
+</div>
+<!-- News & Testimonials End -->
+<!-- Our client start -->
+<div class="wshipping-content-block client-block pt0">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h3 class="heading3-border text-uppercase">Our Valuable Client</h3>
+            </div>
+            <div class="owl-carousel our-client">
+                <div class="client-item"><img src="/assets/images/client-1.jpg" alt="" /></div>
+                <div class="client-item"><img src="/assets/images/client-2.jpg" alt="" /></div>
+                <div class="client-item"><img src="/assets/images/client-3.jpg" alt="" /></div>
+                <div class="client-item"><img src="/assets/images/client-4.jpg" alt="" /></div>
+                <div class="client-item"><img src="/assets/images/client-5.jpg" alt="" /></div>
+                <div class="client-item"><img src="/assets/images/client-6.jpg" alt="" /></div>
+                <div class="client-item"><img src="/assets/images/client-1.jpg" alt="" /></div>
+                <div class="client-item"><img src="/assets/images/client-2.jpg" alt="" /></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our client end -->
