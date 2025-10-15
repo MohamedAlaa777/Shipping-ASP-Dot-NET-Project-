@@ -6,8 +6,8 @@ namespace Ui.Controllers
     public class ShipmentController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IShipment _IShipment;
-        public ShipmentController(ILogger<HomeController> logger, IShipment iGenericRepository)
+        private readonly IShipmentQuery _IShipment;
+        public ShipmentController(ILogger<HomeController> logger, IShipmentQuery iGenericRepository)
         {
             _logger = logger;
             _IShipment = iGenericRepository;
@@ -24,7 +24,7 @@ namespace Ui.Controllers
 
         public async Task<IActionResult> List(int page = 1)
         {
-            var shipments = await _IShipment.GetShipments();
+            var shipments = await _IShipment.GetShipments(page, 10, true, null);
             return View(shipments);
         }
 
@@ -38,9 +38,9 @@ namespace Ui.Controllers
             return View();
         }
 
-        public IActionResult Delete(Guid id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            _IShipment.ChangeStatus(id,0);
+            await _IShipment.ChangeStatus(id, 0);
             return RedirectToAction("List");
         }
     }

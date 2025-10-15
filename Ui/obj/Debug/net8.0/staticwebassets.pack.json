@@ -21893,12 +21893,24 @@
       "PackagePath": "staticwebassets\\Modules\\AppHelper.js"
     },
     {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\CarriersService.js",
+      "PackagePath": "staticwebassets\\Modules\\CarriersService.js"
+    },
+    {
       "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\CititesService.js",
       "PackagePath": "staticwebassets\\Modules\\CititesService.js"
     },
     {
       "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\CountriesService.js",
       "PackagePath": "staticwebassets\\Modules\\CountriesService.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\PayPal.js",
+      "PackagePath": "staticwebassets\\Modules\\PayPal.js"
+    },
+    {
+      "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\Shipment\\AdminActions.js",
+      "PackagePath": "staticwebassets\\Modules\\Shipment\\AdminActions.js"
     },
     {
       "Id": "C:\\Users\\dell\\Documents\\ASP.NET MVC Core\\Shipping\\Ui\\wwwroot\\Modules\\Shipment\\Create.js",

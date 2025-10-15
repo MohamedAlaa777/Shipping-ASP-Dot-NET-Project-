@@ -27,3 +27,4 @@ C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\DAL\obj\Debug\net8.0\refint\DA
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\DAL\obj\Debug\net8.0\DAL.pdb
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\DAL\obj\Debug\net8.0\DAL.genruntimeconfig.cache
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\DAL\obj\Debug\net8.0\ref\DAL.dll
+C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\DAL\obj\Debug\net8.0\DAL.sourcelink.json

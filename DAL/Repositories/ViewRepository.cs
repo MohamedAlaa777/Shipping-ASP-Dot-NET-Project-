@@ -24,11 +24,11 @@ namespace DAL.Repositories
             _logger = log;
         }
 
-        public List<T> GetAll()
+        public async Task<List<T>> GetAll()
         {
             try
             {
-                return _dbSet.AsNoTracking().ToList();
+                return await _dbSet.AsNoTracking().ToListAsync();
             }
             catch (Exception ex)
             {
@@ -36,11 +36,14 @@ namespace DAL.Repositories
             }
         }
 
-        public T GetById(Guid id)
+        public async Task<T?> GetById(Guid id)
         {
             try
             {
-                return _dbSet.AsNoTracking().FirstOrDefault();
+                // Generic fallback: assumes entity has a property named "Id"
+                return await _dbSet
+                    .AsNoTracking()
+                    .FirstOrDefaultAsync(e => EF.Property<Guid>(e, "Id") == id);
             }
             catch (Exception ex)
             {
@@ -48,11 +51,11 @@ namespace DAL.Repositories
             }
         }
 
-        public T GetFirstOrDefault(Expression<Func<T, bool>> filter)
+        public async Task<T?> GetFirstOrDefault(Expression<Func<T, bool>> filter)
         {
             try
             {
-                return _dbSet.Where(filter).AsNoTracking().FirstOrDefault();
+                return await _dbSet.Where(filter).AsNoTracking().FirstOrDefaultAsync();
             }
             catch (Exception ex)
             {
@@ -60,11 +63,11 @@ namespace DAL.Repositories
             }
         }
 
-        public List<T> GetList(Expression<Func<T, bool>> filter)
+        public async Task<List<T>> GetList(Expression<Func<T, bool>> filter)
         {
             try
             {
-                return _dbSet.Where(filter).AsNoTracking().ToList();
+                return await _dbSet.Where(filter).AsNoTracking().ToListAsync();
             }
             catch (Exception ex)
             {

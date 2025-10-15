@@ -208,6 +208,41 @@ namespace DAL.Migrations
                     b.ToTable("TbSetting", (string)null);
                 });
 
+            modelBuilder.Entity("DAL.Entities.TbShipmentStatus", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier")
+                        .HasDefaultValueSql("(newid())");
+
+                    b.Property<Guid>("CreatedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime");
+
+                    b.Property<int>("CurrentState")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Notes")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid?>("ShippmentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("UpdatedBy")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("UpdatedDate")
+                        .HasColumnType("datetime");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ShippmentId");
+
+                    b.ToTable("TbShipmentStatus", (string)null);
+                });
+
             modelBuilder.Entity("DAL.Entities.TbShippingType", b =>
                 {
                     b.Property<Guid>("Id")
@@ -254,6 +289,9 @@ namespace DAL.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier")
                         .HasDefaultValueSql("(newid())");
+
+                    b.Property<Guid?>("CarrierId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("CreatedBy")
                         .HasColumnType("uniqueidentifier");
@@ -320,6 +358,8 @@ namespace DAL.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("CarrierId");
+
                     b.HasIndex("PaymentMethodId");
 
                     b.HasIndex("ReceiverId");
@@ -331,46 +371,6 @@ namespace DAL.Migrations
                     b.HasIndex("ShippingTypeId");
 
                     b.ToTable("TbShippments");
-                });
-
-            modelBuilder.Entity("DAL.Entities.TbShippmentStatus", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier")
-                        .HasDefaultValueSql("(newid())");
-
-                    b.Property<Guid>("CarrierId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("CreatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime");
-
-                    b.Property<int>("CurrentState")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Notes")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid?>("ShippmentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("UpdatedBy")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime?>("UpdatedDate")
-                        .HasColumnType("datetime");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("CarrierId");
-
-                    b.HasIndex("ShippmentId");
-
-                    b.ToTable("TbShipmentStatus", (string)null);
                 });
 
             modelBuilder.Entity("DAL.Entities.TbSubscriptionPackage", b =>
@@ -928,8 +928,23 @@ namespace DAL.Migrations
                     b.Navigation("Country");
                 });
 
+            modelBuilder.Entity("DAL.Entities.TbShipmentStatus", b =>
+                {
+                    b.HasOne("DAL.Entities.TbShippment", "Shippment")
+                        .WithMany("TbShipmentStatus")
+                        .HasForeignKey("ShippmentId")
+                        .HasConstraintName("FK_TbShipmentStatus_TbShippments");
+
+                    b.Navigation("Shippment");
+                });
+
             modelBuilder.Entity("DAL.Entities.TbShippment", b =>
                 {
+                    b.HasOne("DAL.Entities.TbCarrier", "Carrier")
+                        .WithMany("TbShipments")
+                        .HasForeignKey("CarrierId")
+                        .HasConstraintName("FK_TbShipmentStatus_TbCarriers");
+
                     b.HasOne("DAL.Entities.TbPaymentMethod", "PaymentMethod")
                         .WithMany("TbShippments")
                         .HasForeignKey("PaymentMethodId")
@@ -957,6 +972,8 @@ namespace DAL.Migrations
                         .IsRequired()
                         .HasConstraintName("FK_TbShippments_TbShippingTypes");
 
+                    b.Navigation("Carrier");
+
                     b.Navigation("PaymentMethod");
 
                     b.Navigation("Receiver");
@@ -966,24 +983,6 @@ namespace DAL.Migrations
                     b.Navigation("ShipingPackging");
 
                     b.Navigation("ShippingType");
-                });
-
-            modelBuilder.Entity("DAL.Entities.TbShippmentStatus", b =>
-                {
-                    b.HasOne("DAL.Entities.TbCarrier", "Carrier")
-                        .WithMany("TbShippmentStatuses")
-                        .HasForeignKey("CarrierId")
-                        .IsRequired()
-                        .HasConstraintName("FK_TbShipmentStatus_TbCarriers");
-
-                    b.HasOne("DAL.Entities.TbShippment", "Shippment")
-                        .WithMany("TbShipmentStatus")
-                        .HasForeignKey("ShippmentId")
-                        .HasConstraintName("FK_TbShipmentStatus_TbShippments");
-
-                    b.Navigation("Carrier");
-
-                    b.Navigation("Shippment");
                 });
 
             modelBuilder.Entity("DAL.Entities.TbUserReceiver", b =>
@@ -1072,7 +1071,7 @@ namespace DAL.Migrations
 
             modelBuilder.Entity("DAL.Entities.TbCarrier", b =>
                 {
-                    b.Navigation("TbShippmentStatuses");
+                    b.Navigation("TbShipments");
                 });
 
             modelBuilder.Entity("DAL.Entities.TbCity", b =>

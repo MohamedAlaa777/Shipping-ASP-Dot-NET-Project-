@@ -1,0 +1,198 @@
+﻿@using DAL.Models
+@model PagedResult<ShippmentDto>
+
+<!-- Breadcroumbs start -->
+<div class="wshipping-content-block wshipping-breadcroumb inner-bg-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-7">
+                <h1>Shipment History</h1>
+                <a href="index.html" title="Home">Home</a> / Shipment History
+            </div>
+            <div class="col-12 col-lg-5 text-right">
+                <h4>
+                    We freight to all over the world
+                    The best logistic company, <span>FAST</span> and <span>SAFELY!</span>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Breadcroumbs end -->
+<!-- Shipment History start -->
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-9">
+                <div class="order-list">
+                    <h3>Your Shipment History</h3>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>#</th> <!-- Shipment number -->
+                                    <th>Tracking Number</th>
+                                    <th>Order Date</th>
+                                    <th>Shipping Value</th>
+                                    <th>Sender Name</th>
+                                    <th>Receiver Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var index = 1;
+                                    var culture = new System.Globalization.CultureInfo("en-US"); // You can change to "ar-EG" if needed
+                                }
+                                @foreach (var shipment in Model.Items)
+                                {
+                                    <tr>
+                                        <td>@index</td>
+                                        <td>@shipment.TrackingNumber</td>
+                                        <td>@shipment.ShipingDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@string.Format(culture, "{0:C}", shipment.ShippingRate)</td>
+                                        <td>@shipment.UserSender.SenderName</td>
+                                        <td>@shipment.UserReceiver.ReceiverName</td>
+                                        <td>
+                                            <a href="@Url.Action("Show", new { id = shipment.Id })" title="View">
+                                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                            </a>
+                                            @if (shipment.CurrentState<4)
+                                            {
+                                            <a href="@Url.Action("Edit", new { id = shipment.Id })" title="View">
+                                                <i class="fa fa-check-square" aria-hidden="true"></i>
+                                            </a>
+
+                                            <a href="@Url.Action("Delete", new { id = shipment.Id })"
+                                               onclick="return confirm('Are you sure you want to delete this shipment?');"
+                                               title="Delete">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </a>
+                                            }
+
+                                        </td>
+                                    </tr>
+                                    index++;
+                                }
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Shipment pagination">
+                            <ul class="pagination justify-content-center">
+
+                                @if (Model.HasPreviousPage)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.Action("List", new { page = Model.PageNumber - 1 })">Previous</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item disabled">
+                                        <span class="page-link">Previous</span>
+                                    </li>
+                                }
+
+                                @for (int i = 1; i <= Model.TotalPages; i++)
+                                {
+                                    <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                                        <a class="page-link" href="@Url.Action("List", new { page = i })">@i</a>
+                                    </li>
+                                }
+
+                                @if (Model.HasNextPage)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.Action("List", new { page = Model.PageNumber + 1 })">Next</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item disabled">
+                                        <span class="page-link">Next</span>
+                                    </li>
+                                }
+
+                            </ul>
+                        </nav>
+
+                        <a asp-controller="Account" asp-action="Logout" class="btn btn-info">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Right sidebar start -->
+            <div class="col-12 col-lg-3">
+                <div class="right-block left-menu menu-with-title mt60 mb15">
+                    <h4 class="title-with-bg">Select Your Freight</h4>
+                    <ul>
+                        <li class="active"><a href="" title="Air Freight Tracking">Air Freight Tracking</a></li>
+                        <li><a href="" title="Ocean Freight Tracking">Ocean Freight Tracking</a></li>
+                        <li><a href="" title="Road & Rail Freight Tracking">Road & Rail Freight Tracking</a></li>
+                    </ul>
+                </div>
+                <a href="#" class="order-list-button">Your Order List</a>
+            </div>
+            <!-- Right sidebar end -->
+        </div>
+    </div>
+</div>
+<!-- Shipment History end -->
+<!-- Send free quote start -->
+<div class="wshipping-content-block get-quote">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-8"><h4>We Are Always In Here, <span>Need any Help?</span></h4></div>
+            <div class="col-12 col-lg-4 text-right"><a href="contact.html" title="" class="wshipping-button">Contact With Us</a></div>
+        </div>
+    </div>
+</div>
+<!-- Send free quote end -->
+<!-- Our Services Start -->
+<div class="wshipping-content-block">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <div class="section-title wow fadeInUp">
+                    <h2>Our Services</h2>
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-1"></div>
+                    <div class="service-content">
+                        <h3>Ocean Freight Shipping</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-2"></div>
+                    <div class="service-content">
+                        <h3>Air Freight Shipping</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-4">
+                <div class="single-service-item wow fadeInUp">
+                    <div class="service-item-bg service-bg-3"></div>
+                    <div class="service-content">
+                        <h3>Car Shipping</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard</p>
+                        <a href="" title="" class="readmore-btn">Read more <i class="fa fa-angle-right"></i></a>
+                        <div class="location_map"><i class="fa fa-plus"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Our Services end -->

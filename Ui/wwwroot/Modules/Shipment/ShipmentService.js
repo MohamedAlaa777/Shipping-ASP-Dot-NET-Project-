@@ -50,16 +50,26 @@
             TrackingNumber: null,
             ReferenceId: null
         };
+        switch (this.FormIds.CurrentState) {
+            case 2:
+                shipmentDto.CarrierId = $('select[name="DeliveryManId"]').val() || null;
+                break;
+            case 3:
+                shipmentDto.DelivryDate = $('input[name="DeliveryDate"]').val();
+                break;
+        }
         console.log(shipmentDto);
         return shipmentDto;
     },
     FillShipmentForm: function (data) {
+        //we make (FormIds) object to persive values when editing
         this.FormIds = {
             Id: data.Id,
             SenderId: data.UserSender?.Id,
             ReciverId: data.UserReceiver?.Id,
             TrackingNumber: data.TrackingNumber,
-            ShippingRate: data.ShippingRate
+            ShippingRate: data.ShippingRate,
+            CurrentState: data.CurrentState
         };
         $('input[name="SenderName"]').val(data.UserSender?.SenderName || "");
         $('input[name="Email"]').val(data.UserSender?.Email || "");
@@ -97,6 +107,24 @@
         // Dates
         $('input[name="ShipingDate"]').val(new Date(data.ShipingDate).toISOString().split("T")[0]);
         $('input[name="DelivryDate"]').val(new Date(data.DelivryDate).toISOString().split("T")[0]);
+        console.log(data.CurrentState);
+        switch (data.CurrentState) {
+            case 1:
+                $("#mainButton").val("Approve");
+                break;
+            case 2:
+                $("#deliveryManWrapper").show();
+                $("#mainButton").val("Ready For Ship");
+                break;
+            case 3:
+                $("#deliveryDateWrapper").show();
+                $("#mainButton").val("Shipped");
+                break;
+            case 4:
+                $("#mainButton").val("Delivred");
+                $("#secandryButton").show();
+                break;
+        }
     },
 
     SaveShippment: function () {
@@ -118,6 +146,23 @@
         console.log("log data before send");
         console.log(data);
         ApiClient.post("/api/Shipment/Edit", data,
+            function (data) { }, function (xhr) {
+                console.error("API Error:", xhr.responseJSON);
+            });
+    },
+    ChangeStatus: function (status) {
+        let data = ShipmentService.GetModel();
+        data.Id = this.FormIds.Id;
+        data.SenderId = this.FormIds.SenderId;
+        data.ReceiverId = this.FormIds.ReciverId;
+        data.TrackingNumber = this.FormIds.TrackingNumber;
+        data.ShippingRate = this.FormIds.ShippingRate;
+
+        data.CurrentState = status;
+        console.log(data.CurrentState);
+        console.log("log data before send");
+        console.log(data);
+        ApiClient.post("/api/Shipment/ChangeStatus", data,
             function (data) { }, function (xhr) {
                 console.error("API Error:", xhr.responseJSON);
             });

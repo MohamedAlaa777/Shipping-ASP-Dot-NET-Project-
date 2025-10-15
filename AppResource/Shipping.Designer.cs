@@ -79,6 +79,15 @@ namespace AppResource {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Please select a valid delivery date.
+        /// </summary>
+        public static string DelivryDateRequired {
+            get {
+                return ResourceManager.GetString("DelivryDateRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Email is required. .
         /// </summary>
         public static string EmailRequired {
@@ -201,6 +210,15 @@ namespace AppResource {
         public static string RoleRequired {
             get {
                 return ResourceManager.GetString("RoleRequired", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please select a valid shipping date.
+        /// </summary>
+        public static string ShipingDateRequired {
+            get {
+                return ResourceManager.GetString("ShipingDateRequired", resourceCulture);
             }
         }
         

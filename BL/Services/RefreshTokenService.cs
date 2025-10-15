@@ -21,15 +21,17 @@ namespace BL.Services
             _repo = repo;
             _mapper = mapper;
         }
-
+        // this method to revoke old refresh tokens when expired and add new one
         public async Task<bool> Refresh(RefreshTokenDto tokenDto)
         {
+            //revoke old refresh tokens
             var tokenList = await _repo.GetList(a => a.UserId == tokenDto.UserId && a.CurrentState == 1);
             foreach (var dbToken in tokenList)
             {
                 _repo.ChangeStatus(dbToken.Id, Guid.Parse(tokenDto.UserId), 2);
             }
 
+            //add new refresh token
             var dbTokens = _mapper.Map<RefreshTokenDto, TbRefreshTokens>(tokenDto);
             _repo.Add(dbTokens);
             return true;

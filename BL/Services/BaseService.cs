@@ -32,45 +32,40 @@ namespace BL.Services
             _userService = userService;
         }
         // from distination to source 
-        public bool Add(DTO entity)
-        {
-            var dbObject = _mapper.Map<DTO,T>(entity);
-            dbObject.CreatedBy = _userService.GetLoggedInUser();
-            dbObject.CurrentState = 1;
-            return _repo.Add(dbObject);
-        }
-        public bool Add(DTO entity, out Guid id)
+        public async Task<(bool, Guid)> Add(DTO entity)
         {
             var dbObject = _mapper.Map<DTO, T>(entity);
             dbObject.CreatedBy = _userService.GetLoggedInUser();
             dbObject.CurrentState = 1;
-            return _repo.Add(dbObject, out id);
+            var result = await _repo.Add(dbObject);
+            return result;
         }
         // from distination to source 
-        public bool Update(DTO entity)
+        public async Task<bool> Update(DTO entity)
         {
             var dbObject = _mapper.Map<DTO, T>(entity);
             dbObject.UpdatedBy = _userService.GetLoggedInUser();
-            return _repo.Update(dbObject);
-        }
-        public bool ChangeStatus(Guid id, int status = 1)
-        {
-            return _repo.ChangeStatus(id,_userService.GetLoggedInUser(), status);
-        }
-        // from source to distination
-        public List<DTO> GetAll()
-        {
-            
-            var list = _repo.GetAll();
-            return _mapper.Map<List<T>, List<DTO>>(list);
-        }
-        // from source to distination
-        public DTO GetById(Guid id)
-        {
-            var obj = _repo.GetById(id);
-            return _mapper.Map<T,DTO>(obj);
+            return await _repo.Update(dbObject);
         }
 
-       
+        public async Task<bool> ChangeStatus(Guid id, int status = 1)
+        {
+            return await _repo.ChangeStatus(id, _userService.GetLoggedInUser(), status);
+        }
+        // from source to distination
+        public async Task<List<DTO>> GetAll()
+        {
+            var list = await _repo.GetAll();
+            return _mapper.Map<List<T>, List<DTO>>(list);
+        }
+
+        // from source to distination
+        public async Task<DTO> GetById(Guid id)
+        {
+            var obj = await _repo.GetById(id);
+            return _mapper.Map<T, DTO>(obj);
+        }
+
+
     }
 }

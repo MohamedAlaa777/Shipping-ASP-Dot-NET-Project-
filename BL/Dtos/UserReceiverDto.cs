@@ -20,7 +20,7 @@ namespace BL.Dtos
         public string Contact { get; set; } = null!;
         public string OtherAddress { get; set; } = null!;
         public Guid CityId { get; set; }
-
+        public Guid CountryId { get; set; }
         public string Address { get; set; } = null!;
     }
 }

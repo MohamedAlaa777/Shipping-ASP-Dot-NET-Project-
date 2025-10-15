@@ -31,3 +31,4 @@ C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\BL\obj\Debug\net8.0\ref\BL.dll
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\BL\bin\Debug\net8.0\AppResource.dll
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\BL\bin\Debug\net8.0\AppResource.pdb
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\BL\bin\Debug\net8.0\ar\AppResource.resources.dll
+C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\BL\obj\Debug\net8.0\BL.sourcelink.json

@@ -9,11 +9,10 @@ namespace BL.Contract
 {
     public interface IBaseService<T,DTO>
     {
-        List<DTO> GetAll();
-        DTO GetById(Guid id);
-        bool Add(DTO entity);
-        bool Add(DTO entity, out Guid id);
-        bool Update(DTO entity);
-        bool ChangeStatus(Guid id, int status = 1);
+        Task<List<DTO>> GetAll();
+        Task<DTO> GetById(Guid id);
+        Task<(bool, Guid)> Add(DTO entity);
+        Task<bool> Update(DTO entity);
+        Task<bool> ChangeStatus(Guid id, int status = 1);
     }
 }

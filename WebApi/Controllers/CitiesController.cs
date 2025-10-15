@@ -19,20 +19,20 @@ namespace WebApi.Controllers
         }
         // GET: api/<cityController>
         [HttpGet]
-        public ActionResult<ApiResponse<List<CityDto>>> Get()
+        public async Task<ActionResult<ApiResponse<List<CityDto>>>> Get()
         {
             try
             {
-                var data = _city.GetAll();
+                var data = await _city.GetAll();
 
                 return Ok(ApiResponse<List<CityDto>>.SuccessResponse(data));
             }
-            catch(DataAccessException daEx)
+            catch (DataAccessException daEx)
             {
                 return StatusCode(500, ApiResponse<List<CityDto>>.FailResponse
                     ("data access exception", new List<string>() { daEx.Message }));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, ApiResponse<List<CityDto>>.FailResponse
                     ("general exception", new List<string>() { ex.Message }));
@@ -42,11 +42,11 @@ namespace WebApi.Controllers
 
         // GET api/<cityController>/5
         [HttpGet("{id}")]
-        public ActionResult<ApiResponse<CityDto>> Get(Guid id)
+        public async Task<ActionResult<ApiResponse<CityDto>>> Get(Guid id)
         {
             try
             {
-                var data = _city.GetById(id);
+                var data = await _city.GetById(id);
 
                 return Ok(ApiResponse<CityDto>.SuccessResponse(data));
             }
@@ -63,11 +63,11 @@ namespace WebApi.Controllers
         }
 
         [HttpGet("GetByCountry/{id}")]
-        public ActionResult<ApiResponse<CityDto>> GetByCountry(Guid id)
+        public async Task<ActionResult<ApiResponse<CityDto>>> GetByCountry(Guid id)
         {
             try
             {
-                var data = _city.GetByCountry(id);
+                var data = await _city.GetByCountry(id);
 
                 return Ok(ApiResponse<List<CityDto>>.SuccessResponse(data));
             }

@@ -22,6 +22,12 @@ namespace Ui.Controllers
             return View();
         }
 
+        public async Task<IActionResult> Logout()
+        {
+            await _userService.LogoutAsync();
+            return View("Login");
+        }
+
         public IActionResult Register()
         {
             return View();

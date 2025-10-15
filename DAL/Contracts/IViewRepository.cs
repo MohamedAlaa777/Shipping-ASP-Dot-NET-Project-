@@ -9,9 +9,9 @@ namespace DAL.Contracts
 {
     public interface IViewRepository<T> where T : class
     {
-        List<T> GetAll();
-        T GetById(Guid id);
-        T GetFirstOrDefault(Expression<Func<T, bool>> filter);
-        List<T> GetList(Expression<Func<T, bool>> filter);
+        Task<List<T>> GetAll();
+        Task<T> GetById(Guid id);
+        Task<T> GetFirstOrDefault(Expression<Func<T, bool>> filter);
+        Task<List<T>> GetList(Expression<Func<T, bool>> filter);
     }
 }

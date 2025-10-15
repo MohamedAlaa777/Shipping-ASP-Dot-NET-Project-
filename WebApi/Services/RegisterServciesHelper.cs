@@ -2,6 +2,7 @@
 using BL.Contract.Shipment;
 using BL.Mapping;
 using BL.Services;
+using BL.Services.Payment;
 using BL.Services.Shipment;
 using DAL.Contracts;
 using DAL.Data;
@@ -98,11 +99,24 @@ namespace WebApi.Services
             builder.Services.AddScoped<IUserSender, UserSenderService>();
             builder.Services.AddScoped<IUserReceiver, UserReceiverService>();
 
-            builder.Services.AddScoped<IShipment, ShipmentService>();
+            builder.Services.AddScoped<IShipmentCommand, ShipmentCommandService>();
+            builder.Services.AddScoped<IShipmentQuery, ShipmentQueryService>();
             builder.Services.AddScoped<ITrackingNumberCreator, TrackingNumberCreatorService>();
             builder.Services.AddScoped<IRateCalculator, RateCalculatorService>();
+            builder.Services.AddScoped<IShipmentStatus, ShipmentStatusService>();
+            builder.Services.AddScoped<IShipmentStateHandlerFactory, ShipmentStateHandlerFactory>();
+            builder.Services.AddScoped<ApproveShipment>();
+            builder.Services.AddScoped<ReadyShipment>();
+            builder.Services.AddScoped<ShippedShipment>();
+            builder.Services.AddScoped<DelivredShipment>();
+            builder.Services.AddScoped<ReturnedShipment>();
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             builder.Services.AddScoped<IRefreshTokenRetriver, RefreshTokenRetriverService>();
+            builder.Services.AddScoped<ICarrier, CarrierService>();
+
+            builder.Services.AddHttpClient<PayPalGateway>();
+            builder.Services.AddHttpClient<PaymobGateway>();
+            builder.Services.AddScoped<PaymentFactory>();
         }
     }
 }

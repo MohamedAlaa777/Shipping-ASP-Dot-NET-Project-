@@ -83,7 +83,7 @@ namespace WebApi.Controllers
             }
 
             // Retrieve the refresh token from the database
-            var storedToken = _RefreshTokenRetriver.GetByToken(refreshToken);
+            var storedToken = await _RefreshTokenRetriver.GetByToken(refreshToken);
             if (storedToken == null || storedToken.CurrentState == 2 || storedToken.Expires < DateTime.UtcNow)
             {
                 return Unauthorized("Invalid or expired refresh token");
@@ -113,7 +113,7 @@ namespace WebApi.Controllers
             }
 
             // Retrieve the refresh token from the database
-            var storedToken = _RefreshTokenRetriver.GetByToken(refreshToken);
+            var storedToken = await _RefreshTokenRetriver.GetByToken(refreshToken);
             if (storedToken == null || storedToken.CurrentState == 2 || storedToken.Expires < DateTime.UtcNow)
             {
                 return Unauthorized("Invalid or expired refresh token");
@@ -128,7 +128,7 @@ namespace WebApi.Controllers
                 Expires = DateTime.UtcNow.AddDays(7),
                 CurrentState = 1
             };
-            _RefreshTokenService.Refresh(newRefreshDto);
+            await _RefreshTokenService.Refresh(newRefreshDto);
 
             // Set the new refresh token in the cookies
             Response.Cookies.Append("RefreshToken", newRefreshToken, new CookieOptions
@@ -144,8 +144,11 @@ namespace WebApi.Controllers
         async Task<(Claim[], UserDto)> GetClims(string email)
         {
             var user = await _userService.GetUserByEmailAsync(email);
+            Console.WriteLine($"User => Id:{user?.Id}, Email:{user?.Email}");
             var claims = new[] {
+                //we add NameIdentifier to get user id from access token
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+
                 new Claim(ClaimTypes.Name, user.Email),
                 new Claim(ClaimTypes.Role, "User")
             };
@@ -158,7 +161,9 @@ namespace WebApi.Controllers
             var user = await _userService.GetUserByIdAsync(userId);
 
             var claims = new[] {
+                //we add NameIdentifier to get user id from access token
                 new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()),
+
                 new Claim(ClaimTypes.Name, user.Email),
                 new Claim(ClaimTypes.Role, "User")
             };

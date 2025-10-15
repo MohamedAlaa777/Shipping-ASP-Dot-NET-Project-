@@ -12,6 +12,8 @@ using System.Threading.Tasks;
 
 namespace DAL.Repositories
 {
+    // we use unit of work when we have more than table(repository) to make transaction so the context doesn't
+    //save any table in database except when all transaction success (bec, you can't use or save any repository except through unit of work)
     public class UnitOfWork : IUnitOfWork
     {
         private readonly ShippingContext _ctx;

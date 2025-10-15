@@ -1,0 +1,511 @@
+﻿
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> Create New Shipment </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Shipment Form</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Shipment Status Timeline using jQuery plugin style -->
+    <div class="card mb-4">
+        <div class="card-body">
+            <h4 class="card-title">Shipment Status</h4>
+            <div id="shipment-status-timeline" class="timeline">
+                <div class="timeline-step" data-status="Created">Created</div>
+                <div class="timeline-step" data-status="Approved">Approved</div>
+                <div class="timeline-step" data-status="ReadyToShip">Ready for Ship</div>
+                <div class="timeline-step" data-status="Shipped">Shipped</div>
+                <div class="timeline-step" data-status="Delivered">Delivered</div>
+                <div class="timeline-step" data-status="Returned">Returned</div>
+            </div>
+        </div>
+    </div>
+
+    <form id="shipmentForm" class="forms-sample steps" method="post" enctype="multipart/form-data">
+        <div class="wizard-progress-container mb-4">
+            <ul id="progressbar" class="wizard-progress">
+                <li class="active">Where From</li>
+                <li>Where Going</li>
+                <li>What</li>
+                <li>How</li>
+                <li>Payment</li>
+                <li>Review</li>
+                <li>Complete</li>
+            </ul>
+        </div>
+
+        <!-- Step 1 -->
+        <fieldset>
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Sender Information</h4>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label>Country</label>
+                            <select class="form-control" name="Sendercountry" required>
+                                <option value="">Select</option>
+                                <option>United States</option>
+                                <option>Germany</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Company or Name</label>
+                            <input name="SenderName" class="form-control" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Contact</label>
+                            <input name="Contact" class="form-control" required />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-12">
+                            <label>Address</label>
+                            <input name="Address" class="form-control" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Postal Code</label>
+                            <input name="PostalCode" class="form-control" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>City</label>
+                            <select name="SenderCityId" class="form-control" required>
+                                <option>New York</option>
+                                <option>Berlin</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Other Address Info</label>
+                            <input name="OtherAddress" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label>Email</label>
+                            <input type="email" name="Email" class="form-control" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Phone</label>
+                            <input name="Phone" class="form-control" required />
+                        </div>
+                        <div class="form-group col-md-4 d-flex align-items-center">
+                            <div class="form-check">
+                                <label class="form-check-label">
+                                    <input type="checkbox" class="form-check-input" name="IsDefaultSender" checked />
+                                    Use this as my default address
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <input type="button" name="next" class="btn btn-primary next action-button" value="Continue" />
+                        <input type="reset" class="btn btn-light" value="Cancel Shipment" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Step 2: Receiver Info -->
+        <fieldset style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Receiver Information</h4>
+                    <div class="row">
+                        <div class="form-group col-md-4">
+                            <label>Country</label>
+                            <select name="ReciverCountry" class="form-control" required>
+                                <option>United States</option>
+                                <option>Germany</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Company or Name</label>
+                            <input type="text" class="form-control" name="ReciverName" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Contact</label>
+                            <input type="text" class="form-control" name="ReciverContact" required />
+                        </div>
+                        <div class="form-group col-md-12">
+                            <label>Address</label>
+                            <input type="text" class="form-control" name="ReciverAddress" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Postal Code</label>
+                            <input type="text" class="form-control" name="ReciverPostalCode" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>City</label>
+                            <select name="ReciverCity" class="form-control" required>
+                                <option>New York</option>
+                                <option>Berlin</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Other Address</label>
+                            <input type="text" class="form-control" name="ReciverOtherAddress" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Email</label>
+                            <input type="email" class="form-control" name="ReciverEmail" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Phone</label>
+                            <input type="text" class="form-control" name="ReciverPhone" />
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <input type="button" name="previous" class="btn btn-secondary previous action-button" value="Previous" />
+                        <input type="button" name="next" class="btn btn-primary next action-button" value="Continue" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Step 3: Package Info -->
+        <fieldset style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Package Information</h4>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Shipping Packaging</label>
+                            <select name="PackageType" class="form-control" required>
+                                <option>Customer packaging</option>
+                                <option>2kg</option>
+                                <option>10kg</option>
+                                <option>20kg</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Weight (lbs)</label>
+                            <input name="Weight" class="form-control" required />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Length (in)</label>
+                            <input name="Length" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Width (in)</label>
+                            <input name="Width" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Height (in)</label>
+                            <input name="Height" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-4">
+                            <label>Declared Value (USD)</label>
+                            <input name="PackageValue" class="form-control" />
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <input type="button" name="previous" class="btn btn-secondary previous action-button" value="Previous" />
+                        <input type="button" name="next" class="btn btn-primary next action-button" value="Continue" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Step 4: Shipping Method -->
+        <fieldset style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Shipping Method</h4>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Drop-off Date</label>
+                            <input type="text" class="form-control datetimepicker1" placeholder="Date" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Delivery Details</label>
+                            <input name="sDetails" class="form-control" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Shipping Type</label>
+                            <select name="ShippingType" class="form-control">
+                                <option>Standard</option>
+                                <option>Express</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Pickup Date</label>
+                            <input type="text" class="form-control datetimepicker1" placeholder="Date" />
+                        </div>
+                    </div>
+                    <div class="text-end">
+                        <input type="button" name="previous" class="btn btn-secondary previous action-button" value="Previous" />
+                        <input type="button" name="next" class="btn btn-primary next action-button" value="Continue" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Step 5: Payment -->
+        <fieldset style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Payment</h4>
+                    <div class="row">
+                        <div class="form-group col-md-6">
+                            <label>Promo Code</label>
+                            <input type="text" class="form-control" name="PromoCode" />
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label>Payment Method</label>
+                            <select name="PaymentMethod" class="form-control">
+                                <option>Paypal</option>
+                                <option>Credit Card</option>
+                                <option>Cash</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" name="TermsAccepted" id="terms" />
+                        <label class="form-check-label" for="terms">
+                            I accept the terms and conditions.
+                        </label>
+                    </div>
+                    <div class="text-end">
+                        <input type="button" name="previous" class="btn btn-secondary previous action-button" value="Previous" />
+                        <input type="button" name="next" class="btn btn-primary next action-button" value="Continue" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Step 6: Review -->
+        <fieldset style="display: none;">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Review Your Shipment</h4>
+                    <p>Review all information before final submission.</p>
+                    <!-- Here you can show summary content using JS or server-side rendering -->
+                    <div class="text-end">
+                        <input type="button" name="previous" class="btn btn-secondary previous action-button" value="Previous" />
+                        <input type="button" name="next" class="btn btn-success next action-button" value="Submit" />
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+        <!-- Step 7: Complete -->
+        <fieldset style="display: none;">
+            <div class="card">
+                <div class="card-body text-center">
+                    <h1 class="text-success">Thank you for creating your shipment!</h1>
+                    <p>You will receive a confirmation email shortly.</p>
+
+
+                    <div class="form-group" id="deliveryManWrapper" style="display: none;">
+                        <label for="DeliveryManId">Assign Delivery Man</label>
+                        <select id="DeliveryManId" class="form-control" name="DeliveryManId">
+                            <option value="">-- Select --</option>
+                            <option value="1">Ahmed Ali</option>
+                            <option value="2">Sara Kamal</option>
+                            <option value="3">Mohamed Youssef</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group" id="deliveryDateWrapper" style="display: none;">
+                        <label for="DeliveryDate">Delivery Date</label>
+                        <input type="date" class="form-control" id="DeliveryDate" name="DeliveryDate" />
+                    </div>
+
+                    <div class="text-center mt-4">
+                        <input type="submit" name="submit" id="mainButton" class="btn btn-success submit action-button" value="Submit" />
+                        <input type="submit" name="submit" id="secandryButton" style="display: none;"
+                               class="btn btn-danger submit action-button" value="Submit" />
+
+                    </div>
+                </div>
+            </div>
+        </fieldset>
+
+    </form>
+</div>
+
+<style>
+    #shipment-status-timeline {
+        display: flex;
+        justify-content: space-between;
+        position: relative;
+        margin: 20px 0;
+        padding: 0 10px;
+    }
+
+    .timeline-step {
+        text-align: center;
+        position: relative;
+        flex: 1;
+        color: #bbb;
+    }
+
+        .timeline-step::before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            background: #ccc;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 5px;
+        }
+
+        .timeline-step.active {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+            .timeline-step.active::before {
+                background: #007bff;
+            }
+
+    .wizard-progress {
+        display: flex;
+        justify-content: space-between;
+        list-style: none;
+        counter-reset: step;
+        padding-left: 0;
+    }
+
+        .wizard-progress li {
+            position: relative;
+            text-align: center;
+            flex: 1;
+            font-size: 14px;
+            color: #bbb;
+        }
+
+            .wizard-progress li::before {
+                counter-increment: step;
+                content: counter(step);
+                width: 30px;
+                height: 30px;
+                line-height: 30px;
+                display: block;
+                text-align: center;
+                margin: 0 auto 10px;
+                border-radius: 50%;
+                background-color: #ccc;
+                color: white;
+            }
+
+            .wizard-progress li.active::before,
+            .wizard-progress li.active {
+                background-color: #007bff;
+                color: white;
+                font-weight: bold;
+            }
+
+            .wizard-progress li + li::after {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: -50%;
+                width: 100%;
+                height: 2px;
+                background-color: #ccc;
+                z-index: -1;
+            }
+
+            .wizard-progress li.active + li::after {
+                background-color: #007bff;
+            }
+</style>
+
+@section Scripts {
+    <script src="~/modules/apphelper.js"></script>
+    <script src="~/modules/apiclient.js"></script>
+    <script src="~/modules/countriesservice.js"></script>
+    <script src="~/modules/cititesservice.js"></script>
+    <script src="~/modules/shippingtypesservice.js"></script>
+    <script src="~/modules/shippingpackgingservice.js"></script>
+    <script src="~/modules/carriersservice.js"></script>
+    <script src="~/modules/shipment/shipmentservice.js"></script>
+    <script src="~/modules/shipment/managepagecontrols.js"></script>
+    <script src="~/modules/shipment/pageevents.js"></script>
+    <script src="~/modules/shipment/show.js"></script>
+    <script src="~/modules/shipment/adminactions.js"></script>
+    <script>
+        $(document).ready(function () {
+            function updateTimeline(status) {
+                const steps = ['Created', 'Approved', 'ReadyToShip', 'Shipped', 'Delivered', 'Returned'];
+                $('.timeline-step').removeClass('active');
+                const index = steps.indexOf(status);
+                $('.timeline-step').each(function (i) {
+                    if (i <= index) {
+                        $(this).addClass('active');
+                    }
+                });
+            }
+
+            $('#ShipmentStatus').on('change', function () {
+                const status = 'Approved';
+                $('#deliveryManWrapper').toggle(status === 'Approved');
+                $('#deliveryDateWrapper').toggle(status === 'ReadyToShip');
+                updateTimeline(status);
+            });
+            function SetStatus() {
+                switch (ShipmentService.FormIds.CurrentState) {
+                    case 1:
+                        updateTimeline('Created');
+                        break;
+                    case 2:
+                        updateTimeline('Approved');
+                        break;
+                    case 3:
+                        updateTimeline('ReadyToShip');
+                        break;
+                    case 4:
+                        updateTimeline('Shipped');
+                        break;
+                    case 5:
+                        updateTimeline('Delivered');
+                        break;
+
+                    case 6:
+                        updateTimeline('Returned');
+                        break;
+                }
+            }
+            // Initialize timeline based on initial value
+            SetStatus();
+
+            $('.next').click(function () {
+                var currentFieldset = $(this).closest('fieldset');
+                var nextFieldset = currentFieldset.next('fieldset');
+
+                currentFieldset.hide();
+                nextFieldset.show();
+
+                var nextIndex = $('form fieldset').index(nextFieldset);
+                $('#progressbar li').removeClass('active');
+                $('#progressbar li').each(function (i) {
+                    if (i <= nextIndex) {
+                        $(this).addClass('active');
+                    }
+                });
+            });
+
+            $('.previous').click(function () {
+                var currentFieldset = $(this).closest('fieldset');
+                var prevFieldset = currentFieldset.prev('fieldset');
+
+                currentFieldset.hide();
+                prevFieldset.show();
+
+                var prevIndex = $('form fieldset').index(prevFieldset);
+                $('#progressbar li').removeClass('active');
+                $('#progressbar li').each(function (i) {
+                    if (i <= prevIndex) {
+                        $(this).addClass('active');
+                    }
+                });
+            });
+
+        });
+    </script>
+}
+

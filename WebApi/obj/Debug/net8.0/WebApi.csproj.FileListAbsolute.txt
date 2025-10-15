@@ -181,3 +181,4 @@ C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\WebApi\bin\Debug\net8.0\Ui.sta
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\WebApi\bin\Debug\net8.0\Ui.exe
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\WebApi\bin\Debug\net8.0\Ui.dll
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\WebApi\bin\Debug\net8.0\Ui.pdb
+C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\WebApi\obj\Debug\net8.0\WebApi.sourcelink.json

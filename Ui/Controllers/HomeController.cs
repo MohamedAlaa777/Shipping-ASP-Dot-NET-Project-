@@ -11,8 +11,8 @@ namespace Ui.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private readonly IShipment _IGenericRepository;
-        public HomeController(ILogger<HomeController> logger, IShipment iGenericRepository)
+        private readonly IShipmentCommand _IGenericRepository;
+        public HomeController(ILogger<HomeController> logger, IShipmentCommand iGenericRepository)
         {
             _logger = logger;
             _IGenericRepository = iGenericRepository;
@@ -76,6 +76,11 @@ namespace Ui.Controllers
         public IActionResult Index()
         {
             //TestShipment();
+            return View();
+        }
+
+        public IActionResult Payment()
+        {
             return View();
         }
 

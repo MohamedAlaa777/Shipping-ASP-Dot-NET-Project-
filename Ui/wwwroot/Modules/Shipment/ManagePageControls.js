@@ -18,6 +18,22 @@
         });
     },
 
+    fillCarrierDropdown: function (selectSelector) {
+        CarriersService.GetAll(function (response) {
+            $(selectSelector).empty();
+            $(selectSelector).append('<option value="">Select a carrier</option>');
+
+            console.log(response.Data);
+            response.Data.forEach(function (country) {
+                $(selectSelector).append(
+                    `<option value="${country.Id}">${country.CarrierName}</option>`
+                );
+            });
+        }, function (error) {
+            console.error('Error fetching countries:', error.responseText);
+        });
+    },
+
     fillShippingTypesDropdown: function (selectSelector) {
         ShippingTypesService.GetAll(function (response) {
             $(selectSelector).empty();

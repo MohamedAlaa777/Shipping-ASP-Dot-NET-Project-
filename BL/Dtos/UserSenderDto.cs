@@ -21,7 +21,7 @@ namespace BL.Dtos
         public string OtherAddress { get; set; } = null!;
         public bool IsDefault { get; set; }
         public Guid CityId { get; set; }
-
+        public Guid CountryId { get; set; }
         public string Address { get; set; } = null!;
     }
 }

@@ -19,20 +19,20 @@ namespace WebApi.Controllers
         }
         // GET: api/<ShippingTypesController>
         [HttpGet]
-        public ActionResult<ApiResponse<List<ShippingTypeDto>>> Get()
+        public async Task<ActionResult<ApiResponse<List<ShippingTypeDto>>>> Get()
         {
             try
             {
-                var data = _shippingTypes.GetAll();
+                var data = await _shippingTypes.GetAll();
 
                 return Ok(ApiResponse<List<ShippingTypeDto>>.SuccessResponse(data));
             }
-            catch(DataAccessException daEx)
+            catch (DataAccessException daEx)
             {
                 return StatusCode(500, ApiResponse<List<ShippingTypeDto>>.FailResponse
                     ("data access exception", new List<string>() { daEx.Message }));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, ApiResponse<List<ShippingTypeDto>>.FailResponse
                     ("general exception", new List<string>() { ex.Message }));
@@ -42,11 +42,11 @@ namespace WebApi.Controllers
 
         // GET api/<ShippingTypesController>/5
         [HttpGet("{id}")]
-        public ActionResult<ApiResponse<ShippingTypeDto>> Get(Guid id)
+        public async Task<ActionResult<ApiResponse<ShippingTypeDto>>> Get(Guid id)
         {
             try
             {
-                var data = _shippingTypes.GetById(id);
+                var data = await _shippingTypes.GetById(id);
 
                 return Ok(ApiResponse<ShippingTypeDto>.SuccessResponse(data));
             }

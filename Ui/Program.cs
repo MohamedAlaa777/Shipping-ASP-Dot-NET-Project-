@@ -9,7 +9,6 @@ using DAL.UserModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using Ui;
 using Ui.Services;
 
 var builder = WebApplication.CreateBuilder(args);

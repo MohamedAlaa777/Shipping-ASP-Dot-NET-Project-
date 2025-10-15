@@ -1,5 +1,6 @@
 ﻿using BL.Contract;
 using BL.Dtos;
+using DAL.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Ui.Helpers;
@@ -10,68 +11,67 @@ namespace Ui.Areas.admin.Controllers
     [Authorize]
     public class CountriesController : Controller
     {
-        private readonly ICountry _country;
+        private readonly ICountry _ICountry;
         private readonly ILogger<CountriesController> _logger;
         public CountriesController(ICountry shippingType, ILogger<CountriesController> logger)
         {
-            _country = shippingType;
+            _ICountry = shippingType;
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _country.GetAll();
+            var data = await _ICountry.GetAll();
             return View(data);
         }
 
-        public IActionResult Edit(Guid? Id)
+        public async Task<IActionResult> Edit(Guid? Id)
         {
             TempData["MessageType"] = null;
-            var data = new CountryDto();
-            if(Id != null) 
+            var data = new BL.Dtos.CountryDto();
+            if (Id != null)
             {
-                data = _country.GetById((Guid)Id);
+                data = await _ICountry.GetById((Guid)Id);
             }
             return View(data);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(CountryDto data) 
+        public async Task<IActionResult> Save(CountryDto data)
         {
             TempData["MessageType"] = null;
-            if(!ModelState.IsValid)
-                return View("Edit",data);
+            if (!ModelState.IsValid)
+                return View("Edit", data);
             try
             {
                 if (data.Id == Guid.Empty)
-                    _country.Add(data);
+                    await _ICountry.Add(data);
                 else
-                    _country.Update(data);
-
+                    await _ICountry.Update(data);
                 TempData["MessageType"] = MessageTypes.SaveSucess;
             }
             catch (Exception ex)
             {
                 TempData["MessageType"] = MessageTypes.SaveFailed;
-                throw new Exception("save failed error", ex);
             }
+
             return RedirectToAction("Index");
         }
-        public IActionResult Delete(Guid Id) 
+
+        public async Task<IActionResult> Delete(Guid Id)
         {
             TempData["MessageType"] = null;
             try
             {
-                _country.ChangeStatus(Id,0);
+                await _ICountry.ChangeStatus(Id, 0);
                 TempData["MessageType"] = MessageTypes.DeleteSucess;
             }
             catch (Exception ex)
             {
                 TempData["MessageType"] = MessageTypes.DeleteFailed;
-                _logger.LogError(ex, "Failed to change status for Countries ID: {Id}", Id);
-                throw new Exception("save failed error", ex);
             }
+
             return RedirectToAction("Index");
         }
     }

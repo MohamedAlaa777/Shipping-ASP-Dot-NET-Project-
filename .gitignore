@@ -1,0 +1,21 @@
+# Visual Studio files
+.vs/
+*.user
+*.suo
+
+# Build results
+bin/
+obj/
+*.dll
+*.exe
+
+# ASP.NET Core-specific
+wwwroot/lib/
+node_modules/
+
+# Logs
+*.log
+
+# Others
+*.DS_Store
+Thumbs.db

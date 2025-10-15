@@ -10,68 +10,67 @@ namespace Ui.Areas.admin.Controllers
     [Authorize]
     public class ShippingTypesController : Controller
     {
-        private readonly IShippingType _shippingType;
+        private readonly IShippingType _IShippingTypes;
         private readonly ILogger<ShippingTypesController> _logger;
         public ShippingTypesController(IShippingType shippingType, ILogger<ShippingTypesController> logger)
         {
-            _shippingType = shippingType;
+            _IShippingTypes = shippingType;
             _logger = logger;
         }
 
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _shippingType.GetAll();
+            var data = await _IShippingTypes.GetAll();
             return View(data);
         }
 
-        public IActionResult Edit(Guid? Id)
+        public async Task<IActionResult> Edit(Guid? Id)
         {
             TempData["MessageType"] = null;
-            var data = new ShippingTypeDto();
-            if(Id != null) 
+            var data = new BL.Dtos.ShippingTypeDto();
+            if (Id != null)
             {
-                data = _shippingType.GetById((Guid)Id);
+                data = await _IShippingTypes.GetById((Guid)Id);
             }
             return View(data);
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public IActionResult Save(ShippingTypeDto data) 
+        public async Task<IActionResult> Save(ShippingTypeDto data)
         {
             TempData["MessageType"] = null;
-            if(!ModelState.IsValid)
-                return View("Edit",data);
+            if (!ModelState.IsValid)
+                return View("Edit", data);
             try
             {
                 if (data.Id == Guid.Empty)
-                    _shippingType.Add(data);
+                    await _IShippingTypes.Add(data);
                 else
-                    _shippingType.Update(data);
-
+                    await _IShippingTypes.Update(data);
                 TempData["MessageType"] = MessageTypes.SaveSucess;
             }
             catch (Exception ex)
             {
                 TempData["MessageType"] = MessageTypes.SaveFailed;
-                throw new Exception("save failed error", ex);
             }
+
             return RedirectToAction("Index");
         }
-        public IActionResult Delete(Guid Id) 
+
+        public async Task<IActionResult> Delete(Guid Id)
         {
             TempData["MessageType"] = null;
             try
             {
-                _shippingType.ChangeStatus(Id,0);
+                await _IShippingTypes.ChangeStatus(Id, 0);
                 TempData["MessageType"] = MessageTypes.DeleteSucess;
             }
             catch (Exception ex)
             {
                 TempData["MessageType"] = MessageTypes.DeleteFailed;
-                _logger.LogError(ex, "Failed to change status for shipping type ID: {Id}", Id);
-                throw new Exception("save failed error", ex);
             }
+
             return RedirectToAction("Index");
         }
     }

@@ -73,8 +73,8 @@
                         <div class="col-12 col-lg-4 d-flex justify-content-center justify-content-lg-end">
                             <div class="top-menu">
                                 <ul>
-                                    <li><a href="customer-login.html"><i class="fas fa-sign-in-alt"></i> Login</a></li>
-                                    <li><a href="customer-register.html"><i class="fa fa-unlock-alt"></i> Registration</a></li>
+                                    <li><a asp-Controller="Account" asp-action="Login"><i class="fas fa-sign-in-alt"></i> Login</a></li>
+                                    <li><a asp-Controller="Account" asp-action="Register"><i class="fa fa-unlock-alt"></i> Registration</a></li>
                                 </ul>
                             </div>
                             <div class="language">
@@ -114,7 +114,7 @@
                     <nav class="mainmenu">
                         <ul id="navigation">
                             <li class="nav-active">
-                                <a href="index.html">Home</a>
+                                <a asp-Controller="Home" asp-action="Index">Home</a>
                             </li>
                             <li>
                                 <a href="about.html">About Us</a>
@@ -123,7 +123,7 @@
                                 <a href="services.html">Services</a>
                             </li>
                             <li>
-                                <a href="create-shipping.html">Shipping</a>
+                                <a asp-Controller="Shipment" asp-action="Create">Shipping</a>
                             </li>
                             <li>
                                 <a href="blog.html">Blog</a>
@@ -132,7 +132,7 @@
                                 <a href="contact.html">Contuct Us</a>
                             </li>
                             <li>
-                                <a href="profile.html"><img class="header-profile-pic" src="/assets/images/profile.jpg"> Profile</a>
+                                <a asp-controller="Shipment" asp-action="List"><img class="header-profile-pic" src="/assets/images/profile.jpg"> Profile</a>
                             </li>
                         </ul>
                     </nav>

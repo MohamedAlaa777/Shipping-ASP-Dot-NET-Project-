@@ -155,6 +155,11 @@ public partial class ShippingContext : IdentityDbContext<ApplicationUser>
                 .HasForeignKey(d => d.ShippingTypeId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_TbShippments_TbShippingTypes");
+
+            entity.HasOne(d => d.Carrier).WithMany(p => p.TbShipments)
+            .HasForeignKey(d => d.CarrierId)
+            .OnDelete(DeleteBehavior.ClientSetNull)
+            .HasConstraintName("FK_TbShipmentStatus_TbCarriers");
         });
 
         modelBuilder.Entity<TbShipmentStatus>(entity =>
@@ -164,11 +169,6 @@ public partial class ShippingContext : IdentityDbContext<ApplicationUser>
             entity.Property(e => e.Id).HasDefaultValueSql("(newid())");
             entity.Property(e => e.CreatedDate).HasColumnType("datetime");
             entity.Property(e => e.UpdatedDate).HasColumnType("datetime");
-
-            entity.HasOne(d => d.Carrier).WithMany(p => p.TbShippmentStatuses)
-                .HasForeignKey(d => d.CarrierId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_TbShipmentStatus_TbCarriers");
 
             entity.HasOne(d => d.Shippment).WithMany(p => p.TbShipmentStatus)
                 .HasForeignKey(d => d.ShippmentId)

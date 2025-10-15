@@ -19,20 +19,20 @@ namespace WebApi.Controllers
         }
         // GET: api/<countryController>
         [HttpGet]
-        public ActionResult<ApiResponse<List<CountryDto>>> Get()
+        public async Task<ActionResult<ApiResponse<List<CountryDto>>>> Get()
         {
             try
             {
-                var data = _country.GetAll();
+                var data = await _country.GetAll();
 
                 return Ok(ApiResponse<List<CountryDto>>.SuccessResponse(data));
             }
-            catch(DataAccessException daEx)
+            catch (DataAccessException daEx)
             {
                 return StatusCode(500, ApiResponse<List<CountryDto>>.FailResponse
                     ("data access exception", new List<string>() { daEx.Message }));
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
                 return StatusCode(500, ApiResponse<List<CountryDto>>.FailResponse
                     ("general exception", new List<string>() { ex.Message }));
@@ -42,11 +42,11 @@ namespace WebApi.Controllers
 
         // GET api/<countryController>/5
         [HttpGet("{id}")]
-        public ActionResult<ApiResponse<CountryDto>> Get(Guid id)
+        public async Task<ActionResult<ApiResponse<CountryDto>>> Get(Guid id)
         {
             try
             {
-                var data = _country.GetById(id);
+                var data = await _country.GetById(id);
 
                 return Ok(ApiResponse<CountryDto>.SuccessResponse(data));
             }

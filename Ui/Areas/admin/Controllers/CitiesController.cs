@@ -18,20 +18,20 @@ namespace Ui.Areas.admin.Controllers
             _ICountry = iCountry;
             _logger = logger;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            var data = _ICity.GetAllCitites();
+            var data = await _ICity.GetAllCitites();
             return View(data);
         }
 
-        public IActionResult Edit(Guid? Id)
+        public async Task<IActionResult> Edit(Guid? Id)
         {
             TempData["MessageType"] = null;
-            var data = new CityDto();
-            LoadCountries();
+            var data = new BL.Dtos.CityDto();
+            await LoadCountries();
             if (Id != null)
             {
-                data = _ICity.GetById((Guid)Id);
+                data = await _ICity.GetById((Guid)Id);
             }
             return View(data);
         }
@@ -43,48 +43,45 @@ namespace Ui.Areas.admin.Controllers
             TempData["MessageType"] = null;
             if (!ModelState.IsValid)
             {
-                LoadCountries();
+                await LoadCountries();
                 return View("Edit", data);
             }
 
             try
             {
                 if (data.Id == Guid.Empty)
-                    _ICity.Add(data);
+                    await _ICity.Add(data);
                 else
-                    _ICity.Update(data);
+                    await _ICity.Update(data);
                 TempData["MessageType"] = MessageTypes.SaveSucess;
             }
             catch (Exception ex)
             {
                 TempData["MessageType"] = MessageTypes.SaveFailed;
-                throw new Exception("save failed error", ex);
             }
 
             return RedirectToAction("Index");
         }
 
-        public IActionResult Delete(Guid Id)
+        public async Task<IActionResult> Delete(Guid Id)
         {
             TempData["MessageType"] = null;
             try
             {
-                _ICity.ChangeStatus(Id, 0);
+                await _ICity.ChangeStatus(Id, 0);
                 TempData["MessageType"] = MessageTypes.DeleteSucess;
             }
             catch (Exception ex)
             {
                 TempData["MessageType"] = MessageTypes.DeleteFailed;
-                _logger.LogError(ex, "Failed to change status for Cities ID: {Id}", Id);
-                throw new Exception("save failed error", ex);
             }
 
             return RedirectToAction("Index");
         }
 
-        void LoadCountries()
+        async Task LoadCountries()
         {
-            var countries = _ICountry.GetAll() ?? new List<CountryDto>(); // adjust to match your actual model
+            var countries = await _ICountry.GetAll();
             ViewBag.Countries = countries;
         }
 

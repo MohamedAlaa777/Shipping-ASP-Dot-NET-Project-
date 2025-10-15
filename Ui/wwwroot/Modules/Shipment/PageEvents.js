@@ -19,4 +19,6 @@
         const countryId = $(this).val();
         ManagePageControls.fillCityDropdown('select[name="ReciverCity"]', countryId, null);
     });
+
+    ManagePageControls.fillCarrierDropdown('select[name="DeliveryManId"]');
 });

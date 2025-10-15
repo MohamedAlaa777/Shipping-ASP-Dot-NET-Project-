@@ -20,9 +20,9 @@ namespace BL.Services
             _repo = repo;
             _mapper = mapper;
         }
-        public RefreshTokenDto GetByToken(string token)
+        public async Task<RefreshTokenDto> GetByToken(string token)
         {
-            var refreshToken = _repo.GetFirstOrDefault(a => a.Token == token);
+            var refreshToken = await  _repo.GetFirstOrDefault(a => a.Token == token);
             return _mapper.Map<TbRefreshTokens, RefreshTokenDto>(refreshToken);
         }
     }

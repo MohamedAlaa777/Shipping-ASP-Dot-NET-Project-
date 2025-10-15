@@ -34,7 +34,8 @@ public partial class TbShippment : BaseTable
     public double? TrackingNumber { get; set; }
 
     public Guid? ReferenceId { get; set; }
-
+    public Guid? CarrierId { get; set; }
+    public virtual TbCarrier? Carrier { get; set; } = null!;
     public virtual TbPaymentMethod? PaymentMethod { get; set; }
 
     public virtual TbUserReceiver Receiver { get; set; } = null!;
@@ -42,6 +43,6 @@ public partial class TbShippment : BaseTable
     public virtual TbUserSebder Sender { get; set; } = null!;
 
     public virtual TbShippingType ShippingType { get; set; } = null!;
-    public virtual TbShipingPackging ShipingPackging { get; set; } = null!;
+    public virtual TbShipingPackging? ShipingPackging { get; set; } = null!;
     public virtual ICollection<TbShipmentStatus> TbShipmentStatus { get; set; } = new List<TbShipmentStatus>();
  }

@@ -123,6 +123,9 @@
   <data name="CountryName" xml:space="preserve">
     <value>اسم الدولة</value>
   </data>
+  <data name="DelivryDateRequired" xml:space="preserve">
+    <value>يرجى اختيار تاريخ تسليم صالح</value>
+  </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>البريد الإلكتروني مطلوب.</value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="RoleRequired" xml:space="preserve">
     <value>الدور مطلوب.</value>
+  </data>
+  <data name="ShipingDateRequired" xml:space="preserve">
+    <value>يرجى اختيار تاريخ شحن صالح</value>
   </data>
   <data name="ShippingTypes" xml:space="preserve">
     <value>انواع الشحن</value>

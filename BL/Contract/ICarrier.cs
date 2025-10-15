@@ -9,10 +9,8 @@ using System.Threading.Tasks;
 
 namespace BL.Contract
 {
-    public interface IShipment : IBaseService<TbShippment,ShippmentDto>
+    public interface ICarrier : IBaseService<TbCarrier,CarrierDto>
     {
-        public Task Create(ShippmentDto dto);
-        public Task<List<ShippmentDto>> GetShipments();
 
     }
 }

@@ -7,5 +7,5 @@ namespace DAL.Entities;
 public partial class TbCarrier : BaseTable
 {
     public string CarrierName { get; set; } = null!;
-    public virtual ICollection<TbShipmentStatus> TbShippmentStatuses { get; set; } = new List<TbShipmentStatus>();
+    public virtual ICollection<TbShippment> TbShipments { get; set; } = new List<TbShippment>();
 }

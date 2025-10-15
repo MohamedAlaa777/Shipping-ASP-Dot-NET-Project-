@@ -1,4 +1,5 @@
 ﻿using BL.Contract;
+using BL.Contract.Shipment;
 using BL.Dtos;
 using BL.Services;
 using DAL.Exceptions;
@@ -16,12 +17,17 @@ namespace WebApi.Controllers
     [ApiController]
     public class ShipmentController : ControllerBase
     {
-        IShipment _shipment;
+        IShipmentCommand _shipment;
+        IShipmentQuery _shipmentQuery;
         IUserService _userService;
-        public ShipmentController(IShipment shipment, IUserService userService)
+        IShipmentStateHandlerFactory _shipmentStateHandlerFactory;
+        public ShipmentController(IShipmentCommand shipment, IShipmentQuery shipmentQuery,
+            IUserService userService, IShipmentStateHandlerFactory shipmentStateHandlerFactory)
         {
             _shipment = shipment;
             _userService = userService;
+            _shipmentStateHandlerFactory = shipmentStateHandlerFactory;
+            _shipmentQuery = shipmentQuery;
         }
         // GET: api/<ShipmentController>
         [HttpGet]
@@ -29,7 +35,7 @@ namespace WebApi.Controllers
         {
             try
             {
-                var data = await _shipment.GetShipments(); // أو _repo.GetShipments() حسب مكان التنفيذ
+                var data = await _shipmentQuery.GetShipments(); // أو _repo.GetShipments() حسب مكان التنفيذ
 
                 return Ok(ApiResponse<List<ShippmentDto>>.SuccessResponse(data));
             }
@@ -47,29 +53,29 @@ namespace WebApi.Controllers
             }
         }
 
-        //// GET api/<ShipmentController>/5
+        // GET api/<ShipmentController>/5
         [HttpGet("{id}")]
-        //public async Task<ActionResult<ApiResponse<ShippmentDto>>> Get(Guid id)
-        //{
-        //    try
-        //    {
-        //        var data = await _shipment.GetShipment(id); // أو _repo.GetShipments() حسب مكان التنفيذ
+        public async Task<ActionResult<ApiResponse<ShippmentDto>>> Get(Guid id)
+        {
+            try
+            {
+                var data = await _shipmentQuery.GetShipment(id); // أو _repo.GetShipments() حسب مكان التنفيذ
 
-        //        return Ok(ApiResponse<ShippmentDto>.SuccessResponse(data));
-        //    }
-        //    catch (DataAccessException daEx)
-        //    {
-        //        return StatusCode(500, ApiResponse<ShippmentDto>.FailResponse(
-        //            "data access exception",
-        //            new List<string> { daEx.Message }));
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return StatusCode(500, ApiResponse<ShippmentDto>.FailResponse(
-        //            "general exception",
-        //            new List<string> { ex.Message }));
-        //    }
-        //}
+                return Ok(ApiResponse<ShippmentDto>.SuccessResponse(data));
+            }
+            catch (DataAccessException daEx)
+            {
+                return StatusCode(500, ApiResponse<ShippmentDto>.FailResponse(
+                    "data access exception",
+                    new List<string> { daEx.Message }));
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ApiResponse<ShippmentDto>.FailResponse(
+                    "general exception",
+                    new List<string> { ex.Message }));
+            }
+        }
 
         // POST api/<ShipmentController>
         [HttpPost]
@@ -79,7 +85,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost("Create")]
-        public IActionResult Create([FromBody] ShippmentDto data)
+        public async Task<IActionResult> Create([FromBody] ShippmentDto data)
         {
             if (data == null)
             {
@@ -88,7 +94,52 @@ namespace WebApi.Controllers
 
             try
             {
-                var result = _shipment.Create(data);
+                await _shipment.Create(data);
+
+                return Ok(ApiResponse<object>.SuccessResponse("", "Shipment created successfully."));
+            }
+            catch (Exception ex)
+            {
+                var errors = new List<string> { ex.Message };
+                return StatusCode(500, ApiResponse<string>.FailResponse("An error occurred while creating the shipment.", errors));
+            }
+        }
+
+        [HttpPost("Edit")]
+        public async Task<IActionResult> Edit([FromBody] ShippmentDto data)
+        {
+            if (data == null)
+            {
+                return BadRequest(ApiResponse<string>.FailResponse("Shipment data is required."));
+            }
+
+            try
+            {
+                await _shipment.Edit(data);
+
+                return Ok(ApiResponse<object>.SuccessResponse("", "Shipment created successfully."));
+            }
+            catch (Exception ex)
+            {
+                var errors = new List<string> { ex.Message };
+                return StatusCode(500, ApiResponse<string>.FailResponse("An error occurred while creating the shipment.", errors));
+            }
+        }
+
+        [HttpPost("ChangeStatus")]
+        public async Task<IActionResult> ChangeStatus([FromBody] ShippmentDto data)
+        {
+            if (data == null)
+            {
+                return BadRequest(ApiResponse<string>.FailResponse("Shipment data is required."));
+            }
+
+            try
+            {
+                ShipmentStatusEnum targetStatus = (ShipmentStatusEnum)data.CurrentState;
+
+                var result = _shipmentStateHandlerFactory.GetHandler(targetStatus);
+                await result.HandleState(data);
 
                 return Ok(ApiResponse<object>.SuccessResponse(result, "Shipment created successfully."));
             }
@@ -98,27 +149,6 @@ namespace WebApi.Controllers
                 return StatusCode(500, ApiResponse<string>.FailResponse("An error occurred while creating the shipment.", errors));
             }
         }
-
-        //[HttpPost("Edit")]
-        //public IActionResult Edit([FromBody] ShippmentDto data)
-        //{
-        //    if (data == null)
-        //    {
-        //        return BadRequest(ApiResponse<string>.FailResponse("Shipment data is required."));
-        //    }
-
-        //    try
-        //    {
-        //        var result = _shipment.Edit(data);
-
-        //        return Ok(ApiResponse<object>.SuccessResponse(result, "Shipment created successfully."));
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        var errors = new List<string> { ex.Message };
-        //        return StatusCode(500, ApiResponse<string>.FailResponse("An error occurred while creating the shipment.", errors));
-        //    }
-        //}
 
         // PUT api/<ShipmentController>/5
         [HttpPut("{id}")]

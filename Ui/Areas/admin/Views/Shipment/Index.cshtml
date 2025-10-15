@@ -1,0 +1,179 @@
+﻿@using DAL.Models
+@model PagedResult<ShippmentDto>
+
+@section Styles
+{
+    <!-- Plugin css for this page -->
+    <link rel="stylesheet" href="~/admin/vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+    <!-- End plugin css for this page -->
+}
+
+<div class="content-wrapper">
+    <div class="page-header">
+        <h3 class="page-title"> @Labels.Cities </h3>
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">@Labels.Cities</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Data table</li>
+            </ol>
+        </nav>
+    </div>
+    @if (TempData["SuccessMessage"] != null)
+    {
+        <div class="alert alert-success" role="alert">
+            @TempData["SuccessMessage"]
+        </div>
+    }
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title"></h4>
+            <div class="row">
+                <div class="col-12">
+                </div>
+                <div class="col-12">
+                <div class="table-responsive">
+                        <table class="table table-hover" >
+                            <thead>
+                                <tr>
+                                    <th>#</th> <!-- Shipment number -->
+                                    <th>Tracking Number</th>
+                                    <th>Order Date</th>
+                                    <th>Shipping Value</th>
+                                    <th>Sender Name</th>
+                                    <th>Receiver Name</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    var index = 1;
+                                    var culture = new System.Globalization.CultureInfo("en-US"); // You can change to "ar-EG" if needed
+                                }
+                                @foreach (var shipment in Model.Items)
+                                {
+                                    <tr>
+                                        <td>@index</td>
+                                        <td>@shipment.TrackingNumber</td>
+                                        <td>@shipment.ShipingDate.ToString("dd/MM/yyyy")</td>
+                                        <td>@string.Format(culture, "{0:C}", shipment.ShippingRate)</td>
+                                        <td>@shipment.UserSender.SenderName</td>
+                                        <td>@shipment.UserReceiver.ReceiverName</td>
+                                        <td>
+                                            <a href="@Url.Action("Show", new { id = shipment.Id })" title="View">
+                                                <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                            </a>
+                                            <a href="@Url.Action("Edit", new { id = shipment.Id })" title="View">
+                                                <i class="fa fa-check-square" aria-hidden="true"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    index++;
+                                }
+                            </tbody>
+                        </table>
+
+                        <nav aria-label="Shipment pagination">
+                            <ul class="pagination justify-content-center">
+
+                                @if (Model.HasPreviousPage)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber - 1 })">Previous</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item disabled">
+                                        <span class="page-link">Previous</span>
+                                    </li>
+                                }
+
+                                @for (int i = 1; i <= Model.TotalPages; i++)
+                                {
+                                    <li class="page-item @(i == Model.PageNumber ? "active" : "")">
+                                        <a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+                                    </li>
+                                }
+
+                                @if (Model.HasNextPage)
+                                {
+                                    <li class="page-item">
+                                        <a class="page-link" href="@Url.Action("Index", new { page = Model.PageNumber + 1 })">Next</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li class="page-item disabled">
+                                        <span class="page-link">Next</span>
+                                    </li>
+                                }
+
+                            </ul>
+                        </nav>
+
+                        <a asp-controller="Account" asp-action="Logout" class="btn btn-info">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+@section Scripts
+{
+    <!-- plugins:js -->
+    <script src="~/Admin/vendors/js/vendor.bundle.base.js"></script>
+    <!-- endinject -->
+    <!-- Plugin js for this page -->
+    <script src="~/Admin/vendors/datatables.net/jquery.dataTables.js"></script>
+    <script src="~/Admin/vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+    <!-- End plugin js for this page -->
+    <!-- Custom js for this page -->
+    <script src="~/Admin/js/data-table.js"></script>
+    <!-- End custom js for this page -->
+
+    <script>
+        $(document).ready(function () {
+            $('.btn-danger').on('click', function (e) {
+                var id = $(this).data('id');
+                var deleteUrl = '@Url.Action("Delete", "Cities")';
+
+                alert.ConfirmDelete(function (result) {
+                    if (result) {
+                        // Redirect to the delete action with the city ID
+                        window.location.href = deleteUrl + '/' + id;
+                    }
+                });
+
+            });
+        });
+    </script>
+
+    @if (TempData["MessageType"] != null)
+    {
+        <script>
+            $(document).ready(function () {
+                let messageType = @TempData["MessageType"];
+                console.log(messageType);
+                switch (messageType) {
+                    case 1:
+                        alert.Success('@Messages.SaveSuccessTitle', '@Messages.SaveSuccessMessage');
+                        break;
+                    case 2:
+                        alert.Error('@Messages.SaveFailedTitle', '@Messages.SaveFailedMessage');
+                        break;
+                    case 3:
+                        alert.Success('@Messages.DeleteSuccessTitle', '@Messages.DeleteSucessMessage');
+                        break;
+                    case 4:
+                        alert.Error('@Messages.DeleteFailedTitle', '@Messages.DeleteFailedMessage');
+                        break;
+                    default:
+                        console.log("Unknown message type");
+                        break;
+                }
+            });
+        </script>
+    }
+
+}
+<!-- content-wrapper ends -->

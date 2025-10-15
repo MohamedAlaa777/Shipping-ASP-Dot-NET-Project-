@@ -8,7 +8,9 @@ using System.Security.Claims;
 namespace Ui.Services
 {
     //abstract layer between ui and asp.net identity , so ui don't depend directly on asp.net identity 
-    //you can use it by (IUserService) interface
+    //you can use it by (IUserService) interface 
+    //and we don't make (UserService) in BL but make it in UI and WebAi projects bec, authentication systm differ in them
+    //one by jwt and anther with identy with MVC
     public class UserService : IUserService
     {
         private readonly UserManager<ApplicationUser> _userManager;

@@ -21,3 +21,4 @@ C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\Domains\obj\Debug\net8.0\Domai
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\Domains\obj\Debug\net8.0\refint\Domains.dll
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\Domains\obj\Debug\net8.0\Domains.pdb
 C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\Domains\obj\Debug\net8.0\ref\Domains.dll
+C:\Users\dell\Documents\ASP.NET MVC Core\Shipping\Domains\obj\Debug\net8.0\Domains.sourcelink.json

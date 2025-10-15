@@ -123,6 +123,9 @@
   <data name="CountryName" xml:space="preserve">
     <value>Country Name</value>
   </data>
+  <data name="DelivryDateRequired" xml:space="preserve">
+    <value>Please select a valid delivery date</value>
+  </data>
   <data name="EmailRequired" xml:space="preserve">
     <value>Email is required. </value>
   </data>
@@ -164,6 +167,9 @@
   </data>
   <data name="RoleRequired" xml:space="preserve">
     <value>Role is required. </value>
+  </data>
+  <data name="ShipingDateRequired" xml:space="preserve">
+    <value>Please select a valid shipping date</value>
   </data>
   <data name="ShippingTypes" xml:space="preserve">
     <value>Shipping Types</value>
